@@ -9,9 +9,11 @@ import us from "../../../images/country/us.svg";
 import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
 
-const Announcement = ({ scroll }) => {  function classNames(...classes) {
+const Announcement = ({ scroll }) => {  
+  
+  function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
-}
+  }
   return (
     <div className={`bg-[#0F3460]  ${scroll && "hidden"} px-5 xl:px-0`}>
       <div className="flex h-10 items-center justify-between text-xs font-medium text-white xl:container">
