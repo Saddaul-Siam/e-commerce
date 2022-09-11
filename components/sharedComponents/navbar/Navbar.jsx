@@ -30,7 +30,7 @@ const Navbar = () => {
     return classes.filter(Boolean).join(" ");
   }
   return (
-    <div className="fixed top-0 left-0 w-full transition-all duration-500 ease-out ">
+    <div className="fixed top-0 left-0 w-full transition-all duration-500 ease-out z-50">
       <Announcement scroll={scroll} />
       <div className="bg-white shadow-md lg:px-5 xl:px-0">
         <div className="xl:container">

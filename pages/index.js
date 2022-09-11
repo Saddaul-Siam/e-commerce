@@ -1,7 +1,6 @@
 import Head from "next/head";
-import Image from "next/image";
 import Banner from "../components/mainComponents/banner/Banner";
-import Announcement from "../components/sharedComponents/announcement/Announcement";
+import FlashDeals from "../components/mainComponents/flashDeals/FlashDeals";
 import BottomBar from "../components/sharedComponents/bottomBar/BottomBar";
 import Navbar from "../components/sharedComponents/navbar/Navbar";
 
@@ -17,6 +16,7 @@ export default function Home() {
       <div>
         <Navbar />
         <Banner />
+        <FlashDeals />
         <BottomBar />
       </div>
     </div>

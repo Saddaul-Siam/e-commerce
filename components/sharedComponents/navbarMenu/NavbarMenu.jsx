@@ -4,7 +4,7 @@ import { BiCategory } from "react-icons/bi";
 
 const NavbarMenu = ({ scroll }) => {
   return (
-    <div className="xl:container">
+    <div className="xl:container scroll-smooth">
       <div className="hidden lg:block">
         <div
           className={`flex h-14 items-center justify-between ${
