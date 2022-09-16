@@ -1,7 +1,10 @@
 import Head from "next/head";
-import Banner from "../components/mainComponents/banner/Banner";
-import FlashDeals from "../components/mainComponents/flashDeals/FlashDeals";
-import TopCategories from "../components/mainComponents/topCategories/TopCategories";
+import {
+  Banner,
+  FlashDeals,
+  NewArrivals,
+  TopCategories,
+} from "../components/mainComponents/Home";
 import BottomBar from "../components/sharedComponents/bottomBar/BottomBar";
 import Navbar from "../components/sharedComponents/navbar/Navbar";
 
@@ -19,6 +22,7 @@ export default function Home() {
         <Banner />
         <FlashDeals />
         <TopCategories />
+        <NewArrivals />
         <BottomBar />
       </div>
     </div>

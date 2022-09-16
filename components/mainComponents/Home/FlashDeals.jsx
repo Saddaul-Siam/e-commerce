@@ -1,9 +1,9 @@
 import { AiFillThunderbolt, AiOutlineArrowRight } from "react-icons/ai";
-import SwiperProductCard from "../../sharedComponents/swiperProductCard/SwiperProductCard";
 
 import { products } from "../../../data/products";
+import SwiperProductCard from "../../sharedComponents/Swiper/Swiper.ProductCard";
 
-const TopCategories = () => {
+const FlashDeals = () => {
   return (
     <div className="mt-10 bg-[#e6ebf1] py-16">
       <div className="container">
@@ -21,4 +21,4 @@ const TopCategories = () => {
   );
 };
 
-export default TopCategories;
+export default FlashDeals;

@@ -8,7 +8,7 @@ import {
 } from "react-icons/md";
 import { BiCategory } from "react-icons/bi";
 import logo from "../../../images/logo/logo.svg";
-import NavbarMenu from "../navbarMenu/NavbarMenu";
+import NavbarMenu from "./NavbarMenu";
 import Announcement from "../announcement/Announcement";
 import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";

@@ -180,3 +180,60 @@ export const products = [
     color: "Black",
   },
 ];
+
+export const cProducts = [
+  {
+    name: "Sunglass",
+    img: "https://bonik-react.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fbanners%2Fcategory-3.png&w=3840&q=75",
+    order: "3k orders this week",
+    ref: "#",
+  },
+  {
+    name: "Headphone",
+    img: "https://bonik-react.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fbanners%2Fcategory-1.png&w=3840&q=75",
+    order: "3k orders this week",
+    ref: "#",
+  },
+  {
+    name: "Watch",
+    img: "https://bonik-react.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fbanners%2Fcategory-2.png&w=3840&q=75",
+    order: "3k orders this week",
+    ref: "#",
+  },
+  {
+    name: "Sunglass",
+    img: "https://bonik-react.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fbanners%2Fcategory-3.png&w=3840&q=75",
+    order: "3k orders this week",
+    ref: "#",
+  },
+  {
+    name: "Headphone",
+    img: "https://bonik-react.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fbanners%2Fcategory-1.png&w=3840&q=75",
+    order: "3k orders this week",
+    ref: "#",
+  },
+  {
+    name: "Watch",
+    img: "https://bonik-react.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fbanners%2Fcategory-2.png&w=3840&q=75",
+    order: "3k orders this week",
+    ref: "#",
+  },
+  {
+    name: "Sunglass",
+    img: "https://bonik-react.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fbanners%2Fcategory-3.png&w=3840&q=75",
+    order: "3k orders this week",
+    ref: "#",
+  },
+  {
+    name: "Headphone",
+    img: "https://bonik-react.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fbanners%2Fcategory-1.png&w=3840&q=75",
+    order: "3k orders this week",
+    ref: "#",
+  },
+  {
+    name: "Watch",
+    img: "https://bonik-react.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fbanners%2Fcategory-2.png&w=3840&q=75",
+    order: "3k orders this week",
+    ref: "#",
+  },
+];
