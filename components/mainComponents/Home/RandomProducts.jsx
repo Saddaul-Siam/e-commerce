@@ -17,7 +17,7 @@ const RandomProducts = () => {
           </a>
         </div>
         <div className="grid grid-cols-2 gap-x-3 gap-y-10 rounded-md sm:grid-cols-3 lg:grid-cols-5">
-          {products.map((product, index) => (
+          {products.slice(0, 10).map((product, index) => (
             <ProductCard product={product} key={index} />
           ))}
         </div>
