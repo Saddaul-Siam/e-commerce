@@ -2,7 +2,7 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 import { BiCategory } from "react-icons/bi";
 import { cProducts } from "../../../data/products";
 
-import SwiperCatagoriesCard from "../../sharedComponents/Swiper/Swiper.CatagoriesCard";
+import { SwiperCatagoriesCard } from "../../sharedComponents";
 
 const TopCategories = () => {
   return (

@@ -1,7 +1,7 @@
 import { AiFillThunderbolt, AiOutlineArrowRight } from "react-icons/ai";
 
 import { products } from "../../../data/products";
-import SwiperProductCard from "../../sharedComponents/Swiper/Swiper.ProductCard";
+import { SwiperProductCard } from "../../sharedComponents";
 
 const FlashDeals = () => {
   return (
