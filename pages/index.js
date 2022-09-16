@@ -7,6 +7,7 @@ import {
   OurServices,
   RandomProducts,
   TopCategories,
+  DiscountBanner,
 } from "../components/mainComponents/Home";
 import AllCatagories from "../components/mainComponents/Home/AllCatagories";
 
@@ -25,6 +26,7 @@ export default function Home() {
         <FlashDeals />
         <TopCategories />
         <NewArrivals />
+        <DiscountBanner />
         <AllCatagories />
         <RandomProducts />
         <OurServices />
