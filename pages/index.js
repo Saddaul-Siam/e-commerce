@@ -1,12 +1,11 @@
 import Head from "next/head";
+import { BottomBar, Navbar } from "../components/sharedComponents";
 import {
   Banner,
   FlashDeals,
   NewArrivals,
   TopCategories,
 } from "../components/mainComponents/Home";
-import BottomBar from "../components/sharedComponents/bottomBar/BottomBar";
-import Navbar from "../components/sharedComponents/navbar/Navbar";
 
 export default function Home() {
   return (

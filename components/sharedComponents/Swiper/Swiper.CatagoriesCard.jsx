@@ -1,23 +1,13 @@
+import Link from "next/link";
 import { useRef } from "react";
 import { FreeMode, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  AiFillEye,
-  AiFillStar,
-  AiOutlineArrowLeft,
-  AiOutlineArrowRight,
-  AiOutlineHeart,
-  AiOutlineMinus,
-  AiOutlinePlus,
-  AiOutlineStar,
-} from "react-icons/ai";
-import { BsCart2 } from "react-icons/bs";
+import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-import Link from "next/link";
 
 const SwiperCatagoriesCard = ({ cProducts }) => {
   const swiperPrevRef = useRef();
@@ -28,21 +18,17 @@ const SwiperCatagoriesCard = ({ cProducts }) => {
       spaceBetween={10}
       breakpoints={{
         0: {
-          slidesPerView: 2,
+          slidesPerView: 1,
           spaceBetween: 5,
         },
         768: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        1024: {
           slidesPerView: 3,
           spaceBetween: 10,
         },
-        // 1024: {
-        //   slidesPerView: 4,
-        //   spaceBetween: 10,
-        // },
-        // 1440: {
-        //   slidesPerView: 5,
-        //   spaceBetween: 10,
-        // },
       }}
       freeMode={true}
       navigation={{
@@ -61,11 +47,11 @@ const SwiperCatagoriesCard = ({ cProducts }) => {
           <Link href="https://www.youtube.com/watch?v=39uMLYTh40Q" passHref>
             <a target="_blank">
               <div key={product.id} className="group relative w-full p-4">
-                <div className="min-h-32 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md group-hover:opacity-70 lg:aspect-none lg:h-32">
+                <div className="h-32 w-full group-hover:opacity-70">
                   <img
                     src={product.img}
                     alt={product.imageAlt}
-                    className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                    className="h-full w-full rounded-md object-contain object-center lg:object-cover"
                   />
                 </div>
                 {/* Card Name */}
