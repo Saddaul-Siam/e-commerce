@@ -6,6 +6,7 @@ import {
   NewArrivals,
   TopCategories,
 } from "../components/mainComponents/Home";
+import AllCatagories from "../components/mainComponents/Home/AllCatagories";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <FlashDeals />
         <TopCategories />
         <NewArrivals />
+        <AllCatagories />
         <BottomBar />
       </div>
     </div>
