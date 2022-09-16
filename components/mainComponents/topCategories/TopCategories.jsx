@@ -3,7 +3,7 @@ import SwiperProductCard from "../../sharedComponents/swiperProductCard/SwiperPr
 
 import { products } from "../../../data/products";
 
-const FlashDeals = () => {
+const TopCategories = () => {
   return (
     <div className="mt-10 bg-[#e6ebf1] py-16">
       <div className="container">
@@ -21,4 +21,4 @@ const FlashDeals = () => {
   );
 };
 
-export default FlashDeals;
+export default TopCategories;

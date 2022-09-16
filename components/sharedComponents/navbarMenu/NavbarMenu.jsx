@@ -4,7 +4,7 @@ import { BiCategory } from "react-icons/bi";
 
 const NavbarMenu = ({ scroll }) => {
   return (
-    <div className="xl:container scroll-smooth">
+    <div className="scroll-smooth xl:container">
       <div className="hidden lg:block">
         <div
           className={`flex h-14 items-center justify-between ${
@@ -18,7 +18,7 @@ const NavbarMenu = ({ scroll }) => {
           </div>
 
           <div className="">
-            <ul className="flex space-x-10 ">
+            <ul className="font-OpenSans flex space-x-10">
               <li className="cursor-pointer hover:text-red-400">Home</li>
               <li className="cursor-pointer hover:text-red-400">Pages</li>
               <li className="cursor-pointer hover:text-red-400">

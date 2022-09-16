@@ -4,7 +4,7 @@ import { BiHomeAlt, BiCategoryAlt, BiCart } from "react-icons/bi";
 
 const BottomBar = () => {
   return (
-    <div className="fixed bottom-0 w-full bg-white lg:hidden ">
+    <div className="fixed bottom-0 w-full bg-white lg:hidden z-50">
       <ul className="flex text-gray-700/80">
         <li className="flex w-full cursor-pointer flex-col items-center justify-center py-2 hover:text-red-500">
           <BiHomeAlt className="h-6 w-6" /> <p>Home</p>
