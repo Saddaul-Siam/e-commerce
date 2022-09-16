@@ -1,9 +1,11 @@
 import Head from "next/head";
-import { BottomBar, Navbar } from "../components/sharedComponents";
+import { BottomBar, Footer, Navbar } from "../components/sharedComponents";
 import {
   Banner,
   FlashDeals,
   NewArrivals,
+  OurServices,
+  RandomProducts,
   TopCategories,
 } from "../components/mainComponents/Home";
 import AllCatagories from "../components/mainComponents/Home/AllCatagories";
@@ -24,6 +26,9 @@ export default function Home() {
         <TopCategories />
         <NewArrivals />
         <AllCatagories />
+        <RandomProducts />
+        <OurServices />
+        <Footer />
         <BottomBar />
       </div>
     </div>
