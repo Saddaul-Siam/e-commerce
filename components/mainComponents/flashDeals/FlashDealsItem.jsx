@@ -1,4 +1,4 @@
-import React from "react";
+/* import React from "react";
 
 const FlashDealsItem = ({ product }) => {
   return (
@@ -29,3 +29,4 @@ const FlashDealsItem = ({ product }) => {
 };
 
 export default FlashDealsItem;
+ */

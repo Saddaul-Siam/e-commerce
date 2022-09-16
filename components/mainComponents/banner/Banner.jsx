@@ -19,13 +19,13 @@ const Banner = () => {
   return (
     <div className="mt-28 lg:mt-44 xl:container">
       <div className="flex">
-        <div className="w-[22%] hidden lg:block">
+        <div className="hidden w-[22%] lg:block">
           <div className="bg-white shadow-lg">
             <ul className="text-base">
               {categories.map(({ name, id, img }) => (
                 <li
                   key={id}
-                  className="px-3 py-2 hover:bg-red-300 flex justify-between cursor-pointer"
+                  className="flex cursor-pointer justify-between px-3 py-2 hover:bg-red-300"
                 >
                   <div className="flex space-x-3">
                     <Image src={img} alt="" width="20" height="20" />

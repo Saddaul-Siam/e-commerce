@@ -84,7 +84,7 @@ export const products = [
     name: "Basic Tee",
     href: "#",
     imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-04.jpg",
+      "https://bonik-react.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fproducts%2Fflash-4.png&w=1920&q=75",
     imageAlt: "Front of men's Basic Tee in black.",
     price: "$35",
     color: "Black",

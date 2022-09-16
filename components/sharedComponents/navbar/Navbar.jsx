@@ -30,7 +30,7 @@ const Navbar = () => {
     return classes.filter(Boolean).join(" ");
   }
   return (
-    <div className="fixed top-0 left-0 w-full transition-all duration-500 ease-out z-50">
+    <div className="fixed top-0 left-0 z-50 w-full transition-all duration-500 ease-out">
       <Announcement scroll={scroll} />
       <div className="bg-white shadow-md lg:px-5 xl:px-0">
         <div className="xl:container">
@@ -40,7 +40,7 @@ const Navbar = () => {
                 <Image src={logo} alt="" />
 
                 <Menu as="div" className="relative ">
-                  <Menu.Button className="inline-flex justify-center items-center space-x-1 py-2">
+                  <Menu.Button className="inline-flex items-center justify-center space-x-1 py-2">
                     <BiCategory
                       className={`ml-3 text-2xl text-gray-500 ${
                         scroll ? "block" : "hidden"

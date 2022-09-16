@@ -1,62 +1,104 @@
-import { useRef, useState } from "react";
+import Image from "next/image";
+import React, { useRef, useState } from "react";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
-import { BsArrowRightShort, BsArrowLeftShort } from "react-icons/bs";
-import FlashDealsItem from "./FlashDealsItem";
+
+import { FreeMode, Navigation } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
+
 import { products } from "../../../data/products";
 
 const FlashDeals = () => {
-  const [isMoved, setIsMoved] = useState(false);
-  const [slideNumber, setSlideNumber] = useState(0);
-  console.log(slideNumber);
-
-  const listRef = useRef();
-
-  const handleClick = (direction) => {
-    setIsMoved(true);
-    let distance = listRef.current.getBoundingClientRect().x - 305;
-    if (direction === "left" && slideNumber > 0) {
-      setSlideNumber(slideNumber - 1);
-      listRef.current.style.transform = `translateX(${260 + distance}px)`;
-    }
-    if (direction === "right" && slideNumber < 5) {
-      setSlideNumber(slideNumber + 1);
-      listRef.current.style.transform = `translateX(${-270 + distance}px)`;
-    }
-  };
+  const swiperPrevRef = useRef();
+  const swiperNextRef = useRef();
   return (
-    <div className="bg-white mt-20">
-      <div className="container relative">
-        <h2 className="text-2xl font-bold tracking-tight text-gray-900">
-          Flash Deals
-        </h2>
-        <div className="my-10 overflow-hidden">
-          <BsArrowLeftShort
-            className={`w-10 h-10 rounded-full text-white bg-green-500 absolute top-0 bottom-0 -left-5 my-auto cursor-pointer z-10 ${
-              slideNumber == 0 && "bg-gray-600"
-            }`}
-            onClick={() => handleClick("left")}
-            style={{
-              cursor: slideNumber === 0 ? "not-allowed" : "pointer",
-            }}
-          />
-          <div
-            ref={listRef}
-            className="myContainer flex w-max space-x-2 transition-all"
-          >
+    <div className="my-20 bg-[#F6F9FC]">
+      <div className="container">
+        <h2 className="text-2xl font-bold text-gray-700">Flash Deals</h2>
+        <Swiper
+          slidesPerView={1}
+          spaceBetween={10}
+          breakpoints={{
+            0: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 40,
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 50,
+            },
+            1440: {
+              slidesPerView: 5,
+              spaceBetween: 50,
+            },
+          }}
+          freeMode={true}
+          navigation={{
+            prevEl: swiperPrevRef.current,
+            nextEl: swiperNextRef.current,
+          }}
+          modules={[Navigation, FreeMode]}
+          className="mySwiper bg-white"
+        >
+          <div className="w-max space-x-2 bg-white">
             {products.map((product, index) => (
-              <FlashDealsItem product={product} key={index} />
+              <SwiperSlide key={index} className="shadow-2xl">
+                <div
+                  key={product.id}
+                  className="group relative w-full md:w-[256px]"
+                >
+                  <div className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80">
+                    <img
+                      src={product.imageSrc}
+                      alt={product.imageAlt}
+                      className="h-full w-full object-cover object-center lg:h-full lg:w-full "
+                    />
+                  </div>
+                  <div className="mt-4 flex justify-between">
+                    <div>
+                      <h3 className="text-sm text-gray-700">
+                        <a href={product.href}>
+                          <span
+                            aria-hidden="true"
+                            className="absolute inset-0"
+                          />
+                          {product.name}
+                        </a>
+                      </h3>
+                      <p className="mt-1 text-sm text-gray-500">
+                        {product.color}
+                      </p>
+                    </div>
+                    <p className="text-sm font-medium text-gray-900">
+                      {product.price}
+                    </p>
+                  </div>
+                </div>
+              </SwiperSlide>
             ))}
           </div>
-          <BsArrowRightShort
-            className={`w-10 h-10 text-white bg-green-500 absolute top-0 bottom-0 -right-5 my-auto cursor-pointer text-xs x-10 rounded-full ${
-              slideNumber == 5 && "bg-gray-600"
-            }`}
-            onClick={() => handleClick("right")}
-            style={{
-              cursor: slideNumber === 5 ? "not-allowed" : "pointer",
-            }}
-          />
-        </div>
+
+          <div
+            ref={swiperPrevRef}
+            className="absolute top-1/2 bottom-1/2 left-2 z-[2] flex -translate-y-1/2 transform items-center justify-center rounded-full bg-[#808080] p-4 px-1.5 text-white hover:bg-gray-700"
+          >
+            <AiOutlineArrowLeft className="text-xl" />
+          </div>
+          <div
+            ref={swiperNextRef}
+            className="absolute top-1/2 bottom-1/2 right-2 z-[2] flex -translate-y-1/2 transform items-center justify-center rounded-full bg-[#808080] p-4 px-1.5 text-white hover:bg-gray-700 "
+          >
+            <AiOutlineArrowRight className="text-xl" />
+          </div>
+        </Swiper>
       </div>
     </div>
   );
