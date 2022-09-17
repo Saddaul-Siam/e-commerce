@@ -21,7 +21,7 @@ const Banner = () => {
       <div className="flex">
         <div className="hidden w-[22%] lg:block">
           <div className="bg-white shadow-lg">
-            <ul className="text-base">
+            <ul className="text-base py-2">
               {categories.map(({ name, img }, index) => (
                 <li
                   key={index}
@@ -56,7 +56,7 @@ const Banner = () => {
                 <Image
                   src={banner}
                   alt=""
-                  className="object-contain"
+                  className="object-cover object-center"
                   layout="fill"
                 />
               </SwiperSlide>
