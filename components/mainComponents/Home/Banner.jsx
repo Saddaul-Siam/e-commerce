@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState, useEffect } from "react";
 import banners from "../../../images/banners/index";
 import categories from "../../../images/categories/index";
 import { MdKeyboardArrowRight } from "react-icons/md";
@@ -16,52 +16,66 @@ import { Pagination, Navigation, Autoplay } from "swiper";
 import Image from "next/image";
 
 const Banner = () => {
+  const [currentBg, setCurrentBg] = useState(0);
+  let bannerBgColor = [];
+  // console.log(bannerBgColor);
+  bannerBgColor.map((color) => {
+    console.log(color);
+  });
   return (
-    <div className="mt-28 lg:mt-44 xl:container">
-      <div className="flex">
-        <div className="hidden w-[22%] lg:block">
-          <div className="bg-white shadow-lg">
-            <ul className="text-base py-2">
-              {categories.map(({ name, img }, index) => (
-                <li
-                  key={index}
-                  className="flex cursor-pointer justify-between px-3 py-2 hover:bg-red-300"
-                >
-                  <div className="flex space-x-3">
-                    <Image src={img} alt="" width="20" height="20" />
-                    <p>{name}</p>
-                  </div>
-                  <MdKeyboardArrowRight className="text-xl" />
-                </li>
-              ))}
-            </ul>
+    <div
+      className="mt-28 lg:mt-[10.9rem]"
+      style={{
+        backgroundColor: currentBg,
+      }}
+    >
+      <div className="xl:container">
+        <div className="flex">
+          <div className="hidden w-[22%] lg:block">
+            <div className="bg-white shadow-lg">
+              <ul className="py-1 text-sm">
+                {categories.map(({ name, img }, index) => (
+                  <li
+                    key={index}
+                    className="flex cursor-pointer justify-between px-3 py-2 hover:bg-red-300"
+                  >
+                    <div className="flex space-x-3">
+                      <Image src={img} alt="" width="20" height="20" />
+                      <p>{name}</p>
+                    </div>
+                    <MdKeyboardArrowRight className="text-xl" />
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-        </div>
-        <div className="w-full lg:w-[78%]">
-          <Swiper
-            className="mySwiper h-40 w-full md:h-72 lg:h-full"
-            grabCursor={true}
-            autoplay={{
-              delay: 2500,
-              disableOnInteraction: false,
-            }}
-            slidesPerView={"auto"}
-            pagination={{
-              clickable: true,
-            }}
-            modules={[Pagination, Autoplay]}
-          >
-            {banners.map((banner, index) => (
-              <SwiperSlide key={index}>
-                <Image
-                  src={banner}
-                  alt=""
-                  className="object-cover object-center"
-                  layout="fill"
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
+          <div className="w-full lg:w-[78%]">
+            <Swiper
+              className="mySwiper h-40 w-full md:h-72 lg:h-full"
+              grabCursor={true}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              slidesPerView={"auto"}
+              pagination={{
+                clickable: true,
+              }}
+              modules={[Pagination, Autoplay]}
+            >
+              {banners.map(({ id, img, bg }) => (
+                <SwiperSlide key={id}>
+                  {bannerBgColor.push(bg)}
+                  <Image
+                    src={img}
+                    alt=""
+                    className="object-cover object-center"
+                    layout="fill"
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         </div>
       </div>
     </div>

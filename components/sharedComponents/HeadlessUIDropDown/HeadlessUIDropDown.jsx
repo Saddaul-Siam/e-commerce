@@ -5,7 +5,6 @@ import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
 
 const HeadlessUIDropDown = ({ btnImg, btnText, dopData }) => {
-  console.log(dopData);
   function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
   }

@@ -1,14 +1,14 @@
-import fashion from "./fashion.png";
-import electronics from "./electronics.png";
-import bikes from "./bikes.png";
-import home from "./home & garden.png";
-import gifts from "./gift-box.png";
-import music from "./music.png";
-import healthBeauty from "./beauty.png";
-import pets from "./pets.png";
-import babyToys from "./toys.png";
-import groceries from "./food.png";
-import automotive from "./electronics.png";
+import fashion from "./fashion.svg";
+import electronics from "./electronics.svg";
+import bikes from "./bikes.svg";
+import home from "./home&garden.svg";
+import gifts from "./giftbox.svg";
+import music from "./music.svg";
+import healthBeauty from "./beauty.svg";
+import pets from "./pets.svg";
+import babyToys from "./toys.svg";
+import groceries from "./groceries.svg";
+import automotive from "./automotive.svg";
 
 const categories = [
   { id: 1, name: "Fashion", img: fashion },
@@ -21,6 +21,8 @@ const categories = [
   { id: 8, name: "Pets", img: pets },
   { id: 9, name: "Baby", img: babyToys },
   { id: 10, name: "Groceries", img: groceries },
+  { id: 10, name: "Groceries", img: groceries },
+  { id: 10, name: "Automotive", img: automotive },
 ];
 
 export default categories;

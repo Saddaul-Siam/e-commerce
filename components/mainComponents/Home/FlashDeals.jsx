@@ -5,7 +5,7 @@ import { SwiperProductCard } from "../../sharedComponents";
 
 const FlashDeals = () => {
   return (
-    <div className="mt-10 bg-[#e6ebf1] py-16">
+    <div className="mt-0 bg-[#e6ebf1] py-16">
       <div className="container">
         <div className="flex justify-between">
           <h2 className="pb-5 text-2xl font-bold italic text-gray-700">
