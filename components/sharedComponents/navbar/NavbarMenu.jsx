@@ -16,7 +16,6 @@ const NavbarMenu = ({ scroll }) => {
             <p className="font-semibold text-gray-500"> Categories</p>
             <MdKeyboardArrowDown className="text-2xl text-gray-500" />
           </div>
-
           <div className="">
             <ul className="font-OpenSans flex space-x-10">
               <li className="cursor-pointer hover:text-red-400">Home</li>

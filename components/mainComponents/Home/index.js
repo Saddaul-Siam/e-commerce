@@ -5,3 +5,4 @@ export { default as TopCategories } from "../Home/TopCategories";
 export { default as RandomProducts } from "../Home/RandomProducts";
 export { default as OurServices } from "../Home/OurServices";
 export { default as DiscountBanner } from "../Home/DiscountBanner";
+export { default as AllCatagories } from "../Home/AllCatagories";

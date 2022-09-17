@@ -22,9 +22,9 @@ const Banner = () => {
         <div className="hidden w-[22%] lg:block">
           <div className="bg-white shadow-lg">
             <ul className="text-base">
-              {categories.map(({ name, id, img }) => (
+              {categories.map(({ name, img }, index) => (
                 <li
-                  key={id}
+                  key={index}
                   className="flex cursor-pointer justify-between px-3 py-2 hover:bg-red-300"
                 >
                   <div className="flex space-x-3">
@@ -51,10 +51,10 @@ const Banner = () => {
             }}
             modules={[Pagination, Autoplay]}
           >
-            {banners.map((ban) => (
-              <SwiperSlide key={ban}>
+            {banners.map((banner, index) => (
+              <SwiperSlide key={index}>
                 <Image
-                  src={ban}
+                  src={banner}
                   alt=""
                   className="object-contain"
                   layout="fill"

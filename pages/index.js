@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { BottomBar, Footer, Navbar } from "../components/sharedComponents";
 import {
   Banner,
   FlashDeals,
@@ -8,8 +7,9 @@ import {
   RandomProducts,
   TopCategories,
   DiscountBanner,
+  AllCatagories,
 } from "../components/mainComponents/Home";
-import AllCatagories from "../components/mainComponents/Home/AllCatagories";
+import { BottomBar, Footer, Navbar } from "../components/sharedComponents";
 
 export default function Home() {
   return (

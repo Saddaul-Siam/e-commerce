@@ -10,7 +10,7 @@ export const products = [
     color: "Black",
   },
   {
-    id: 1,
+    id: 2,
     name: "Basic Tee",
     href: "#",
     imageSrc:
@@ -20,7 +20,7 @@ export const products = [
     color: "Black",
   },
   {
-    id: 1,
+    id: 3,
     name: "Basic Tee",
     href: "#",
     imageSrc:
@@ -30,7 +30,7 @@ export const products = [
     color: "Black",
   },
   {
-    id: 1,
+    id: 4,
     name: "Basic Tee",
     href: "#",
     imageSrc:
@@ -40,7 +40,7 @@ export const products = [
     color: "Black",
   },
   {
-    id: 1,
+    id: 5,
     name: "Basic Tee",
     href: "#",
     imageSrc:
@@ -50,7 +50,7 @@ export const products = [
     color: "Black",
   },
   {
-    id: 1,
+    id: 6,
     name: "Basic Tee",
     href: "#",
     imageSrc:
@@ -60,7 +60,7 @@ export const products = [
     color: "Black",
   },
   {
-    id: 1,
+    id: 7,
     name: "Basic Tee",
     href: "#",
     imageSrc:
@@ -70,7 +70,7 @@ export const products = [
     color: "Black",
   },
   {
-    id: 1,
+    id: 8,
     name: "Basic Tee",
     href: "#",
     imageSrc:
@@ -80,7 +80,7 @@ export const products = [
     color: "Black",
   },
   {
-    id: 1,
+    id: 9,
     name: "Basic Tee",
     href: "#",
     imageSrc:
@@ -90,7 +90,7 @@ export const products = [
     color: "Black",
   },
   {
-    id: 1,
+    id: 10,
     name: "Basic Tee",
     href: "#",
     imageSrc:
@@ -100,7 +100,7 @@ export const products = [
     color: "Black",
   },
   {
-    id: 1,
+    id: 11,
     name: "Basic Tee",
     href: "#",
     imageSrc:
@@ -110,7 +110,7 @@ export const products = [
     color: "Black",
   },
   {
-    id: 1,
+    id: 12,
     name: "Basic Tee",
     href: "#",
     imageSrc:
@@ -120,7 +120,7 @@ export const products = [
     color: "Black",
   },
   {
-    id: 1,
+    id: 13,
     name: "Basic Tee",
     href: "#",
     imageSrc:
@@ -130,7 +130,7 @@ export const products = [
     color: "Black",
   },
   {
-    id: 1,
+    id: 14,
     name: "Basic Tee",
     href: "#",
     imageSrc:
@@ -140,7 +140,7 @@ export const products = [
     color: "Black",
   },
   {
-    id: 1,
+    id: 15,
     name: "Basic Tee",
     href: "#",
     imageSrc:
@@ -150,7 +150,7 @@ export const products = [
     color: "Black",
   },
   {
-    id: 1,
+    id: 16,
     name: "Basic Tee",
     href: "#",
     imageSrc:
@@ -160,7 +160,7 @@ export const products = [
     color: "Black",
   },
   {
-    id: 1,
+    id: 17,
     name: "Basic Tee",
     href: "#",
     imageSrc:
@@ -170,7 +170,7 @@ export const products = [
     color: "Black",
   },
   {
-    id: 1,
+    id: 18,
     name: "Basic Tee",
     href: "#",
     imageSrc:
@@ -180,7 +180,7 @@ export const products = [
     color: "Black",
   },
   {
-    id: 1,
+    id: 19,
     name: "Basic Tee",
     href: "#",
     imageSrc:
@@ -190,7 +190,7 @@ export const products = [
     color: "Black",
   },
   {
-    id: 1,
+    id: 20,
     name: "Basic Tee",
     href: "#",
     imageSrc:
