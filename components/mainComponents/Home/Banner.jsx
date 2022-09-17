@@ -16,17 +16,27 @@ import { Pagination, Navigation, Autoplay } from "swiper";
 import Image from "next/image";
 
 const Banner = () => {
-  const [currentBg, setCurrentBg] = useState(0);
+  const [currentBg, setCurrentBg] = useState([]);
+  const [counter, setCounter] = useState(0);
+
   let bannerBgColor = [];
-  // console.log(bannerBgColor);
-  bannerBgColor.map((color) => {
-    console.log(color);
-  });
+
+  useEffect(() => {
+    setCurrentBg(bannerBgColor);
+  }, []);
+
+  setTimeout(() => {
+    if (counter < currentBg.length - 1) {
+      setCounter(counter + 1);
+    } else {
+      setCounter(0);
+    }
+  }, 3000);
   return (
     <div
       className="mt-28 lg:mt-[10.9rem]"
       style={{
-        backgroundColor: currentBg,
+        backgroundColor: currentBg[counter],
       }}
     >
       <div className="xl:container">
@@ -54,7 +64,7 @@ const Banner = () => {
               className="mySwiper h-40 w-full md:h-72 lg:h-full"
               grabCursor={true}
               autoplay={{
-                delay: 2500,
+                delay: 3000,
                 disableOnInteraction: false,
               }}
               slidesPerView={"auto"}
@@ -69,7 +79,7 @@ const Banner = () => {
                   <Image
                     src={img}
                     alt=""
-                    className="object-cover object-center"
+                    className="object-fill object-center"
                     layout="fill"
                   />
                 </SwiperSlide>
