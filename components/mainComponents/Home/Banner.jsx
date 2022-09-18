@@ -1,23 +1,21 @@
-import React, { useState, useEffect } from "react";
+import Image from "next/image";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import banners from "../../../images/banners/index";
 import categories from "../../../images/categories/index";
-import { MdKeyboardArrowRight } from "react-icons/md";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import { Pagination, Autoplay } from "swiper";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
-// import required modules
-import { Pagination, Navigation, Autoplay } from "swiper";
-import Image from "next/image";
+import { MdKeyboardArrowRight } from "react-icons/md";
 
 const Banner = () => {
+  const swiperRef = useRef(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
   const [currentBg, setCurrentBg] = useState([]);
-  const [counter, setCounter] = useState(0);
 
   let bannerBgColor = [];
 
@@ -25,18 +23,27 @@ const Banner = () => {
     setCurrentBg(bannerBgColor);
   }, []);
 
-  setTimeout(() => {
-    if (counter < currentBg.length - 1) {
-      setCounter(counter + 1);
-    } else {
-      setCounter(0);
+  const updateIndex = useCallback(
+    () => setCurrentSlide(swiperRef?.current?.swiper?.realIndex),
+    []
+  );
+
+  useEffect(() => {
+    const swiperInstance = swiperRef.current.swiper;
+    if (swiperInstance) {
+      swiperInstance.on("slideChange", updateIndex);
     }
-  }, 3000);
+    return () => {
+      if (swiperInstance) {
+        swiperInstance.off("slideChange", updateIndex);
+      }
+    };
+  }, [updateIndex]);
   return (
     <div
       className="mt-28 lg:mt-[10.9rem]"
       style={{
-        backgroundColor: currentBg[counter],
+        backgroundColor: currentBg[currentSlide],
       }}
     >
       <div className="xl:container">
@@ -61,6 +68,7 @@ const Banner = () => {
           </div>
           <div className="w-full lg:w-[78%]">
             <Swiper
+              ref={swiperRef}
               className="mySwiper h-40 w-full md:h-72 lg:h-full"
               grabCursor={true}
               autoplay={{
