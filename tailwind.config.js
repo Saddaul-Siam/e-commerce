@@ -6,6 +6,9 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
+  daisyui: {
+    themes: ["light"],
+  },
   theme: {
     extend: {},
     container: {
@@ -14,6 +17,7 @@ module.exports = {
   },
   plugins: [
     require("@tailwindcss/aspect-ratio"),
+    require("daisyui"),
     function ({ addComponents }) {
       addComponents({
         ".container": {

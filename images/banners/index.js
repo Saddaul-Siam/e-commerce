@@ -3,13 +3,17 @@ import banner2 from "./banner2.jpg";
 import banner3 from "./banner3.jpg";
 import banner4 from "./banner4.jpg";
 import banner5 from "./banner5.jpg";
+import banner6 from "./banner6.jpg";
+import banner7 from "./banner7.jpg";
 
 const banners = [
-  { id: 1, img: banner1, bg: "#666666" },
-  { id: 2, img: banner2, bg: "#ef4444" },
-  { id: 3, img: banner3, bg: "#0891b2" },
-  { id: 4, img: banner4, bg: "#d97706" },
-  { id: 5, img: banner5, bg: "#22c55e" },
+  { id: 1, img: banner1, bg: "#F39958" },
+  { id: 2, img: banner2, bg: "#FBD3A5" },
+  { id: 3, img: banner3, bg: "#F95607" },
+  { id: 4, img: banner4, bg: "#400785" },
+  { id: 5, img: banner5, bg: "#E5E0DD" },
+  { id: 6, img: banner6, bg: "#C2FFFA" },
+  { id: 7, img: banner7, bg: "#C2FFFA" },
 ];
 
 export default banners;
