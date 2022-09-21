@@ -5,7 +5,7 @@ import { products } from "../../../data/products";
 
 const RandomProducts = () => {
   return (
-    <div className="bg-[#e6ebf1] pb-16">
+    <div className="bg-[#e6ebf1] pb-16 relative">
       <div className="container">
         <div className="flex justify-between">
           <h2 className="pb-5 text-2xl font-bold italic text-gray-700">

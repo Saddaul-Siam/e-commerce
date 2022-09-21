@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ["tailwindui.com" ,"i.ibb.co"],
+    domains: ["tailwindui.com" ,"i.ibb.co",],
   },
 };
 

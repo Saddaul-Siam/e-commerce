@@ -24,7 +24,7 @@ const Announcement = ({ scroll }) => {
         scroll && "hidden"
       } scroll-smooth px-5 xl:px-0`}
     >
-      <div className="flex h-10 items-center justify-between text-xs font-medium text-white xl:container">
+      <div className="flex h-10 items-center justify-between text-xs font-medium text-white xl:container transition duration-500 transform">
         <div className="lg:hidden">
           <div className="flex space-x-5">
             <Image src={logo} alt="" />
