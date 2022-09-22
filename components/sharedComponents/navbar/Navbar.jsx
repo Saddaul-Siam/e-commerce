@@ -12,8 +12,10 @@ import NavbarMenu from "./NavbarMenu";
 import Announcement from "../announcement/Announcement";
 import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
+import SideBarShoppingCart from "../../mainComponents/Home/SideBarShoppingCart";
 
 const Navbar = () => {
+  const [showProductCard, setShowProductCard] = useState(false);
   const [scroll, setScroll] = useState(null);
 
   useEffect(() => {
@@ -214,7 +216,10 @@ const Navbar = () => {
               />
             </div>
             <div className="hidden space-x-5 lg:block">
-              <span className="rounded-full bg-slate-200 p-2">
+              <span
+                className="cursor-pointer rounded-full bg-slate-200 p-2"
+                onClick={() => setShowProductCard(true)}
+              >
                 <FiShoppingCart className="text- inline h-5 w-5" />
               </span>
               <span className="rounded-full bg-slate-200 p-2">
@@ -225,6 +230,9 @@ const Navbar = () => {
         </div>
         <NavbarMenu scroll={scroll} />
       </div>
+      {showProductCard && (
+        <SideBarShoppingCart setShowProductCard={setShowProductCard} />
+      )}
     </div>
   );
 };
