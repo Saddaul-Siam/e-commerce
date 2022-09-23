@@ -10,7 +10,6 @@ import {
   AllCatagories,
 } from "../components/mainComponents/Home";
 import { BottomBar, Footer, Navbar } from "../components/sharedComponents";
-import ProductsModal from "../components/sharedComponents/productsCard/Products.modal";
 
 export default function Home() {
   return (

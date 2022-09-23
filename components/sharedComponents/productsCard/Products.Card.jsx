@@ -13,7 +13,7 @@ import { BsCart2 } from "react-icons/bs";
 const ProductsCard = ({ product, key }) => {
   return (
     <>
-      <Link href={`product/${product.id}`}>
+      <Link href={`/product/${product.id}`}>
         <div className="relative">
           <div
             key={product.id}
