@@ -1,6 +1,7 @@
+import Link from "next/link";
 import React from "react";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
-import { Footer, Navbar } from "../components/sharedComponents";
+import { Footer, Navbar } from "../../sharedComponents";
 
 const OrderCart = () => {
   return (
@@ -8,25 +9,33 @@ const OrderCart = () => {
       <Navbar />
       <div className="container mt-28 lg:mt-[10.9rem]">
         <div className="flex items-center py-10">
-          <p className="cursor-pointer rounded-full bg-red-500/90 py-2 px-6 text-sm font-semibold text-white">
-            <span className="hidden sm:block">1. Cart</span>
-            <span className="sm:hidden">Cart</span>
-          </p>
+          <Link href="/cart">
+            <p className="cursor-pointer rounded-full bg-red-500/90 py-2 px-6 text-sm font-semibold text-white">
+              <span className="hidden sm:block">1. Cart</span>
+              <span className="sm:hidden">Cart</span>
+            </p>
+          </Link>
           <div className="w-20 border-t-4 border-red-200" />
-          <p className="cursor-pointer rounded-full bg-red-200 py-2 px-6 text-sm font-semibold text-red-500/90">
-            <span className="hidden sm:block">2. Details</span>
-            <span className="sm:hidden">Details</span>
-          </p>
+          <Link href="/details">
+            <p className="cursor-pointer rounded-full bg-red-200 py-2 px-6 text-sm font-semibold text-red-500/90">
+              <span className="hidden sm:block">2. Details</span>
+              <span className="sm:hidden">Details</span>
+            </p>
+          </Link>
           <div className="w-20 border-t-4 border-red-200" />
-          <p className="cursor-pointer rounded-full bg-red-200 py-2 px-6 text-sm font-semibold text-red-500/90">
-            <span className="hidden sm:block">3. Payment</span>
-            <span className="sm:hidden">Payment</span>
-          </p>
+          <Link href="/payment">
+            <p className="cursor-pointer rounded-full bg-red-200 py-2 px-6 text-sm font-semibold text-red-500/90">
+              <span className="hidden sm:block">3. Payment</span>
+              <span className="sm:hidden">Payment</span>
+            </p>
+          </Link>
           <div className="w-20 border-t-4 border-red-200" />
-          <p className="cursor-pointer rounded-full bg-red-200 py-2 px-6 text-sm font-semibold text-red-500/90">
-            <span className="hidden sm:block">4. Review</span>
-            <span className="sm:hidden">Review</span>
-          </p>
+          <Link href="/review">
+            <p className="cursor-pointer rounded-full bg-red-200 py-2 px-6 text-sm font-semibold text-red-500/90">
+              <span className="hidden sm:block">4. Review</span>
+              <span className="sm:hidden">Review</span>
+            </p>
+          </Link>
         </div>
         <div className="mb-10	grid grid-cols-3 gap-5">
           <div className="col-span-3 space-y-5 lg:col-span-2">
