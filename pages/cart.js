@@ -1,12 +1,12 @@
 import React from "react";
-import SideBarShoppingCart from "../components/mainComponents/Home/SideBarShoppingCart";
+import { OrderCart } from "../components/mainComponents/order";
 
-const cart = () => {
+const Cart = () => {
   return (
     <div>
-      <SideBarShoppingCart />
+      <OrderCart />
     </div>
   );
 };
 
-export default cart;
+export default Cart;
