@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { Footer, Navbar } from "../../sharedComponents";
-import OrderSummaryCart from "../../subComponents/orderProduct/OrderSummaryCart";
+import OrderSummaryCart from "./OrderSummaryCart";
 
 const OrderProductDetails = () => {
   return (
