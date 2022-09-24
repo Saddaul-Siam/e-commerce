@@ -1,10 +1,10 @@
 import React from "react";
-import { OrderCart } from "../components/mainComponents/Order";
+import { OrderProductCart } from "../components/mainComponents/OrderProduct";
 
 const Cart = () => {
   return (
     <div>
-      <OrderCart />
+      <OrderProductCart />
     </div>
   );
 };

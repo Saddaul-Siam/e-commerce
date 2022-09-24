@@ -1,10 +1,10 @@
 import React from "react";
-import { OrderPayment } from "../components/mainComponents/Order";
+import { OrderProductPayment } from "../components/mainComponents/OrderProduct";
 
 const payment = () => {
   return (
     <div>
-      <OrderPayment />
+      <OrderProductPayment />
     </div>
   );
 };

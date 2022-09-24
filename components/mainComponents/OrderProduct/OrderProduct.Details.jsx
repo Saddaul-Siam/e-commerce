@@ -1,12 +1,13 @@
 import Link from "next/link";
 import React from "react";
 import { Footer, Navbar } from "../../sharedComponents";
+import OrderSummaryCart from "../../subComponents/orderProduct/OrderSummaryCart";
 
-const OrderDetails = () => {
+const OrderProductDetails = () => {
   return (
     <div className="bg-slate-200">
       <Navbar />
-      <div className="container mt-28 lg:mt-[10.9rem]">
+      <div className="container mt-28 lg:mt-[10.9rem] ">
         <div className="flex items-center py-10">
           <Link href="/cart">
             <p className="cursor-pointer rounded-full bg-red-500/90 py-2 px-6 text-sm font-semibold text-white">
@@ -14,9 +15,9 @@ const OrderDetails = () => {
               <span className="sm:hidden">Cart</span>
             </p>
           </Link>
-          <div className="w-20 border-t-4 border-red-200" />
+          <div className="w-20 border-t-4 border-red-500/90" />
           <Link href="/details">
-            <p className="cursor-pointer rounded-full bg-red-200 py-2 px-6 text-sm font-semibold text-red-500/90">
+            <p className="cursor-pointer rounded-full bg-red-500/90 py-2 px-6 text-sm font-semibold text-white">
               <span className="hidden sm:block">2. Details</span>
               <span className="sm:hidden">Details</span>
             </p>
@@ -38,7 +39,7 @@ const OrderDetails = () => {
         </div>
         <div className="mb-10	grid grid-cols-3 gap-5">
           <div className="col-span-3 lg:col-span-2">
-            <div className="space-y-5 rounded-md bg-white p-5">
+            <div className="space-y-5 rounded-md bg-white p-5 py-10">
               <h4 className="pl-5 text-lg font-medium text-gray-600">
                 Shipping Address
               </h4>
@@ -112,37 +113,7 @@ const OrderDetails = () => {
           </div>
 
           <div className="col-span-3 lg:col-span-1">
-            <div className="space-y-3 bg-white p-4">
-              <h3 className="text-xl">Order Summary</h3>
-              <div className="flex justify-between text-base">
-                <p className="text-gray-500 ">Subtitle</p>
-                <p className="text-black ">৳ 500</p>
-              </div>
-              <div className="flex justify-between text-base">
-                <p className="text-gray-500 ">Subtitle</p>
-                <p className="text-black ">৳ 500</p>
-              </div>
-              <div className="w-full">
-                <p className="text-sm text-gray-500">Email</p>
-                <input
-                  type="text"
-                  className="h-10 w-4/5 w-full border px-2 focus:outline-red-500/90"
-                  placeholder="Enter Voucher Code"
-                />
-                <button className="w-1/5 border bg-teal-500 py-2 px-2 text-white transition duration-100 ease-in-out hover:border-teal-500 hover:bg-white hover:text-teal-500">
-                  APPLY
-                </button>
-              </div>
-              <div className="flex justify-between text-base">
-                <p className="text-base font-semibold text-gray-500 ">Total</p>
-                <p className="font-semibold text-red-500/90 ">৳ 1000</p>
-              </div>
-              <div>
-                <button className="w-full bg-red-500/90 py-2 text-sm text-white transition duration-100 ease-in-out hover:bg-red-600">
-                  PROCEED TO CHECKOUT
-                </button>
-              </div>
-            </div>
+            <OrderSummaryCart />
           </div>
         </div>
       </div>
@@ -151,4 +122,4 @@ const OrderDetails = () => {
   );
 };
 
-export default OrderDetails;
+export default OrderProductDetails;
