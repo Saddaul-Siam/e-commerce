@@ -1,8 +1,10 @@
+import { useRouter } from "next/router";
 import React from "react";
 import { AiOutlineShopping } from "react-icons/ai";
 import SideBarShoppingCartItem from "../../subComponents/sideBarShoppingCartItem/SideBarShoppingCartItem";
 
 const SideBarShoppingCart = ({ setShowProductCard }) => {
+  const router = useRouter();
   return (
     <section className="fixed inset-0 flex h-screen w-screen justify-between ">
       <div
@@ -37,10 +39,16 @@ const SideBarShoppingCart = ({ setShowProductCard }) => {
             </div>
           </div>
           <div className="my-3 ml-3 mr-7 space-y-3">
-            <button className="w-full rounded-md bg-red-600 p-2 text-sm font-semibold text-white">
+            <button
+              className="w-full rounded-md bg-red-600 p-2 text-sm font-semibold text-white"
+              onClick={() => router.push("/details")}
+            >
               Checkout Now ($122.00)
             </button>
-            <button className="w-full rounded-md border border-red-600 p-2 text-sm font-semibold text-red-600">
+            <button
+              className="w-full rounded-md border border-red-600 p-2 text-sm font-semibold text-red-600"
+              onClick={() => router.push("/cart")}
+            >
               View Cart
             </button>
           </div>

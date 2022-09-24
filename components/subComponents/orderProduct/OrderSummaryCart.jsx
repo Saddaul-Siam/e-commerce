@@ -3,7 +3,6 @@ import React from "react";
 
 const OrderSummaryCart = () => {
   const router = useRouter();
-  console.log(router.asPath);
   return (
     <div className="space-y-3 rounded-md bg-white p-4">
       <h3 className="text-xl">Order Summary</h3>

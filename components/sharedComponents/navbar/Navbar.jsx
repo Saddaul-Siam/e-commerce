@@ -13,6 +13,7 @@ import Announcement from "../announcement/Announcement";
 import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import SideBarShoppingCart from "../../mainComponents/Home/SideBarShoppingCart";
+import Link from "next/link";
 
 const Navbar = () => {
   const [showProductCard, setShowProductCard] = useState(false);
@@ -39,7 +40,9 @@ const Navbar = () => {
           <div className="flex items-center justify-center py-4 lg:justify-between">
             <div className="hidden lg:block">
               <div className="flex items-center justify-center">
-                <Image src={logo} alt="" />
+                <Link href="/">
+                  <Image src={logo} alt="" className="cursor-pointer" />
+                </Link>
 
                 <Menu as="div" className="relative ">
                   <Menu.Button className="inline-flex items-center justify-center space-x-1 py-2">
