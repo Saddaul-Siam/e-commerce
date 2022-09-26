@@ -5,10 +5,11 @@ const DashboardNavigation = ({ navData }) => {
     <ul>
       {navData.map((nav, index) => (
         <li
-          className="my-1 cursor-pointer bg-slate-200/90 p-1 pl-3 text-base text-gray-600 transition duration-200 ease-in-out hover:bg-red-500/90 hover:text-white"
+          className="my-2 flex cursor-pointer p-1 pl-3 text-base text-gray-600 transition duration-200 ease-in-out hover:bg-red-500/90 hover:text-white items-center space-x-3"
           key={index}
         >
-          {nav.title}
+          <span>{nav.icon}</span>
+          <span>{nav.title}</span>
         </li>
       ))}
     </ul>

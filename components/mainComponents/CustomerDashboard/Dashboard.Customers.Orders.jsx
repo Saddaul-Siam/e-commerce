@@ -3,6 +3,12 @@ import { FaShoppingBag } from "react-icons/fa";
 import SubCustomerOrderCart from "../../subComponents/dashboard/customer/Sub.Customer.Order.Cart";
 
 const DashboardCustomersOrders = () => {
+  const orders = [
+    { id: "15644621", status: "pending", date: "Sep 25, 2022", total: 600 },
+    { id: "15644621", status: "pending", date: "Sep 25, 2022", total: 600 },
+    { id: "15644621", status: "pending", date: "Sep 25, 2022", total: 600 },
+    { id: "15644621", status: "pending", date: "Sep 25, 2022", total: 600 },
+  ];
   return (
     <div className="mb-10">
       <h2 className="text-xl font-semibold text-gray-700">
@@ -19,12 +25,7 @@ const DashboardCustomersOrders = () => {
           </ul>
         </div>
         <div>
-          <SubCustomerOrderCart />
-          <SubCustomerOrderCart />
-          <SubCustomerOrderCart />
-          <SubCustomerOrderCart />
-          <SubCustomerOrderCart />
-          <SubCustomerOrderCart />
+          <SubCustomerOrderCart orders={orders} />
         </div>
       </div>
     </div>

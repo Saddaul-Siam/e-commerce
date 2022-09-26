@@ -1,12 +1,9 @@
-import { useRouter } from "next/router";
 import React from "react";
-import { DashboardCustomersOrders } from "../../../components/mainComponents/CustomerDashboard";
-import { Footer, Navbar } from "../../../components/sharedComponents";
-import DashboardNavigation from "../../../components/subComponents/dashboard/Dashboard.Navigation";
+import { DashboardCustomersOrders } from "../../../../components/mainComponents/CustomerDashboard";
+import { Footer, Navbar } from "../../../../components/sharedComponents";
+import DashboardNavigation from "../../../../components/subComponents/dashboard/Dashboard.Navigation";
 
 const Index = () => {
-  const routers = useRouter();
-  const route = routers.route;
   const userDashboard = [
     { title: "Orders", route: "/dashboard/customer/orders" },
     { title: "Wishlist", route: "/dashboard/customer/wishlist" },
@@ -24,7 +21,7 @@ const Index = () => {
         <div className="container mt-44">
           <div className="grid grid-cols-4 gap-5 pt-5">
             <div className="col-span-1">
-              <div className="my-1 bg-white p-2 rounded-md">
+              <div className="my-1 rounded-md bg-white p-2">
                 <h2 className="ml-3 pb-5 text-base font-medium text-gray-600">
                   DASHBOARD
                 </h2>

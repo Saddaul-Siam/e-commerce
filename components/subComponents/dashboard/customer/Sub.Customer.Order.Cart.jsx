@@ -1,19 +1,29 @@
+import Link from "next/link";
 import React from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
 
-const SubCustomerOrderCart = () => {
+const SubCustomerOrderCart = ({ orders }) => {
   return (
-    <ul className="my-3 grid grid-cols-4 rounded-md bg-white py-5 px-5 text-base font-light text-gray-600 shadow">
-      <li className="text-lg text-black">1050017AS</li>
-      <li>Pending</li>
-      <li>Sep 25, 2022</li>
-      <li className="flex justify-between">
-        <span>$ 550</span>
-        <span className="rounded-full p-2 text-xl transition duration-200 ease-in-out hover:bg-slate-200">
-          <AiOutlineArrowRight />
-        </span>
-      </li>
-    </ul>
+    <>
+      {orders.map(({ id, status, date, total }, i) => (
+        <ul
+          key={i}
+          className="my-3 grid grid-cols-4 rounded-md bg-white py-5 px-5 text-base font-light text-gray-600 shadow"
+        >
+          <li className="text-lg text-black">{id}</li>
+          <li>{status}</li>
+          <li>{date}</li>
+          <li className="flex justify-between">
+            <span>$ {total}</span>
+            <Link href={`/dashboard/customer/orders/${id}`}>
+              <span className="cursor-pointer rounded-full p-2 text-xl transition duration-200 ease-in-out hover:bg-slate-200">
+                <AiOutlineArrowRight />
+              </span>
+            </Link>
+          </li>
+        </ul>
+      ))}
+    </>
   );
 };
 
