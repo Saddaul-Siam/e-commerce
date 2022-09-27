@@ -11,7 +11,11 @@ const SubCustomerOrderCart = ({ orders }) => {
           className="my-3 grid grid-cols-4 rounded-md bg-white py-5 px-5 text-base font-light text-gray-600 shadow"
         >
           <li className="text-lg text-black">{id}</li>
-          <li>{status}</li>
+          <li>
+            <p className="inline rounded-full bg-slate-200 py-1 px-3 text-sm">
+              {status}
+            </p>
+          </li>
           <li>{date}</li>
           <li className="flex justify-between">
             <span>$ {total}</span>

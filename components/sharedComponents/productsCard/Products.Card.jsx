@@ -10,14 +10,14 @@ import {
 } from "react-icons/ai";
 import { BsCart2 } from "react-icons/bs";
 
-const ProductsCard = ({ product, key }) => {
+const ProductsCard = ({ product }) => {
   return (
     <>
       <Link href={`/product/${product.id}`}>
         <div className="relative">
           <div
             key={product.id}
-            className="group relative w-full rounded-md bg-white"
+            className="group relative w-full rounded-md bg-white pb-1"
           >
             <div className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-white group-hover:opacity-60 lg:aspect-none lg:h-80">
               <img
@@ -77,22 +77,6 @@ const ProductsCard = ({ product, key }) => {
           </div>
         </div>
       </Link>
-      {/* <div className="hidden">
-        <div className="absolute inset-0 z-10 flex h-full w-full items-center justify-center overflow-hidden bg-gray-600/10">
-          <div className="h-96 w-96 bg-white ">
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam,
-              maxime totam ipsum veritatis ratione unde provident soluta sit
-              neque autem voluptates fuga facere doloribus tempore quam
-              perspiciatis eum recusandae voluptate sed, repellat delectus. Non,
-              voluptatibus odio esse deleniti in omnis? Veritatis dolor facilis
-              nulla reprehenderit, necessitatibus consectetur placeat
-              consequatur aperiam.
-            </p>
-            name 1 {product.name}
-          </div>
-        </div>
-      </div> */}
     </>
   );
 };
