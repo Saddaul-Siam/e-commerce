@@ -1,8 +1,20 @@
 import React from "react";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { BiCategory } from "react-icons/bi";
+import Link from "next/link";
+import { Menu } from "@headlessui/react";
+import HeadlessUICategoriesDPD from "../HeadlessUIDropDown/HeadlessUICategoriesDPD";
+import { useRouter } from "next/router";
 
 const NavbarMenu = ({ scroll }) => {
+  const { route } = useRouter();
+  const menu = [
+    { name: "Home", href: "" },
+    { name: "Pages", href: "" },
+    { name: "User Account", href: "/dashboard/customer/orders" },
+    { name: "Vendor Account", href: "" },
+    { name: "Track My Order", href: "" },
+  ];
   return (
     <div className="transform scroll-smooth transition duration-500 xl:container">
       <div className="hidden lg:block">
@@ -11,24 +23,23 @@ const NavbarMenu = ({ scroll }) => {
             scroll && "hidden"
           }`}
         >
-          <div className="flex cursor-pointer space-x-2 rounded bg-slate-200 px-5 py-2">
-            <BiCategory className="text-2xl" />
-            <p className="font-semibold text-gray-500"> Categories</p>
-            <MdKeyboardArrowDown className="text-2xl text-gray-500" />
-          </div>
+          <Menu as="div" className={` relative `}>
+            <Menu.Button
+              className={`flex cursor-pointer space-x-2 rounded bg-slate-200 px-5 py-2`}
+            >
+              <BiCategory className="text-2xl" />
+              <p className="font-semibold text-gray-500"> Categories</p>
+              <MdKeyboardArrowDown className="text-2xl text-gray-500" />
+            </Menu.Button>
+            {route === "/" ? "" : <HeadlessUICategoriesDPD />}
+          </Menu>
           <div>
             <ul className="font-OpenSans flex space-x-10">
-              <li className="cursor-pointer hover:text-red-400">Home</li>
-              <li className="cursor-pointer hover:text-red-400">Pages</li>
-              <li className="cursor-pointer hover:text-red-400">
-                User Account
-              </li>
-              <li className="cursor-pointer hover:text-red-400">
-                Vendor Account
-              </li>
-              <li className="cursor-pointer hover:text-red-400">
-                Track My Order
-              </li>
+              {menu.map(({ name, href }, index) => (
+                <Link href={href} key={index}>
+                  <li className="cursor-pointer hover:text-red-400">{name}</li>
+                </Link>
+              ))}
             </ul>
           </div>
         </div>

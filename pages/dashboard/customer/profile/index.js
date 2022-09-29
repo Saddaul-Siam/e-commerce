@@ -1,11 +1,11 @@
 import React from "react";
 import { Footer, Navbar } from "../../../../components/sharedComponents";
 import DashboardNavigation from "../../../../components/subComponents/dashboard/Dashboard.Navigation";
-import { DashboardCustomersWishlists } from "../../../../components/mainComponents/CustomerDashboard";
 import {
   userAccounts,
   userDashboard,
 } from "../../../../data/dashboard.navigation";
+import { DashboardCustomersProfile } from "../../../../components/mainComponents/CustomerDashboard";
 
 const Index = () => {
   return (
@@ -26,7 +26,7 @@ const Index = () => {
             </div>
           </div>
           <div className="col-span-3">
-            <DashboardCustomersWishlists />
+            <DashboardCustomersProfile />
           </div>
         </div>
       </div>

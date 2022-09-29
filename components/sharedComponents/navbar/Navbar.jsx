@@ -1,19 +1,16 @@
+import Link from "next/link";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { FiShoppingCart, FiSearch } from "react-icons/fi";
-import {
-  MdOutlineAccountCircle,
-  MdKeyboardArrowDown,
-  MdKeyboardArrowRight,
-} from "react-icons/md";
-import { BiCategory } from "react-icons/bi";
 import logo from "../../../images/logo/logo.svg";
 import NavbarMenu from "./NavbarMenu";
 import Announcement from "../announcement/Announcement";
-import { Fragment } from "react";
-import { Menu, Transition } from "@headlessui/react";
 import SideBarShoppingCart from "../../mainComponents/Home/SideBarShoppingCart";
-import Link from "next/link";
+import { MdOutlineAccountCircle } from "react-icons/md";
+import HeadlessUICategoriesDPD from "../HeadlessUIDropDown/HeadlessUICategoriesDPD";
+import { BiCategory } from "react-icons/bi";
+import { MdKeyboardArrowDown } from "react-icons/md";
+import { Menu } from "@headlessui/react";
 
 const Navbar = () => {
   const [showProductCard, setShowProductCard] = useState(false);
@@ -29,9 +26,6 @@ const Navbar = () => {
     });
   }, []);
 
-  function classNames(...classes) {
-    return classes.filter(Boolean).join(" ");
-  }
   return (
     <div className="fixed top-0 left-0 z-50 w-full transform transition duration-500">
       <Announcement scroll={scroll} />
@@ -57,156 +51,7 @@ const Navbar = () => {
                       }`}
                     />
                   </Menu.Button>
-
-                  <Transition
-                    as={Fragment}
-                    enter="transition ease-out duration-100"
-                    enterFrom="transform opacity-0 scale-95"
-                    enterTo="transform opacity-100 scale-100"
-                    leave="transition ease-in duration-75"
-                    leaveFrom="transform opacity-100 scale-100"
-                    leaveTo="transform opacity-0 scale-95"
-                  >
-                    <Menu.Items className="absolute left-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                      <div className="py-1">
-                        <Menu.Item>
-                          {({ active }) => (
-                            <a
-                              href="#"
-                              className={classNames(
-                                active
-                                  ? "bg-gray-100 text-gray-900"
-                                  : "text-gray-700",
-                                "block px-4 py-2 text-sm"
-                              )}
-                            >
-                              <div className="flex justify-between">
-                                <span>Fashion</span>
-                                <span>
-                                  <MdKeyboardArrowRight className="text-xl" />
-                                </span>
-                              </div>
-                            </a>
-                          )}
-                        </Menu.Item>
-                        <Menu.Item>
-                          {({ active }) => (
-                            <a
-                              href="#"
-                              className={classNames(
-                                active
-                                  ? "bg-gray-100 text-gray-900"
-                                  : "text-gray-700",
-                                "block px-4 py-2 text-sm"
-                              )}
-                            >
-                              <div className="flex justify-between">
-                                <span>Electronics</span>
-                                <span>
-                                  <MdKeyboardArrowRight className="text-xl" />
-                                </span>
-                              </div>
-                            </a>
-                          )}
-                        </Menu.Item>
-                        <Menu.Item>
-                          {({ active }) => (
-                            <a
-                              href="#"
-                              className={classNames(
-                                active
-                                  ? "bg-gray-100 text-gray-900"
-                                  : "text-gray-700",
-                                "block px-4 py-2 text-sm"
-                              )}
-                            >
-                              <div className="flex justify-between">
-                                <span> Home & Garden</span>
-                                <span>
-                                  <MdKeyboardArrowRight className="text-xl" />
-                                </span>
-                              </div>
-                            </a>
-                          )}
-                        </Menu.Item>
-                        <Menu.Item>
-                          {({ active }) => (
-                            <a
-                              href="#"
-                              className={classNames(
-                                active
-                                  ? "bg-gray-100 text-gray-900"
-                                  : "text-gray-700",
-                                "block px-4 py-2 text-sm"
-                              )}
-                            >
-                              <div className="flex justify-between">
-                                <span>Bikes</span>
-                                <span>
-                                  <MdKeyboardArrowRight className="text-xl" />
-                                </span>
-                              </div>
-                            </a>
-                          )}
-                        </Menu.Item>
-                        <Menu.Item>
-                          {({ active }) => (
-                            <a
-                              href="#"
-                              className={classNames(
-                                active
-                                  ? "bg-gray-100 text-gray-900"
-                                  : "text-gray-700",
-                                "block px-4 py-2 text-sm"
-                              )}
-                            >
-                              <div className="flex justify-between">
-                                <span> Health & Beauty</span>
-                                <span>
-                                  <MdKeyboardArrowRight className="text-xl" />
-                                </span>
-                              </div>
-                            </a>
-                          )}
-                        </Menu.Item>
-                        <Menu.Item>
-                          {({ active }) => (
-                            <a
-                              href="#"
-                              className={classNames(
-                                active
-                                  ? "bg-gray-100 text-gray-900"
-                                  : "text-gray-700",
-                                "block px-4 py-2 text-sm"
-                              )}
-                            >
-                              <div className="flex justify-between">
-                                <span> Baby Toys</span>
-                                <span>
-                                  <MdKeyboardArrowRight className="text-xl" />
-                                </span>
-                              </div>
-                            </a>
-                          )}
-                        </Menu.Item>
-                        <Menu.Item>
-                          {({ active }) => (
-                            <a
-                              href="#"
-                              className={classNames(
-                                active
-                                  ? "bg-gray-100 text-gray-900"
-                                  : "text-gray-700",
-                                "block px-4 py-2 text-sm"
-                              )}
-                            >
-                              Pets
-                            </a>
-                          )}
-                        </Menu.Item>
-                      </div>
-                    </Menu.Items>
-                  </Transition>
+                  <HeadlessUICategoriesDPD />
                 </Menu>
               </div>
             </div>
