@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import React from "react";
 import { AiOutlineShopping } from "react-icons/ai";
-import SideBarShoppingCartItem from "../../subComponents/sideBarShoppingCartItem/SideBarShoppingCartItem";
+import SideBarShoppingCartItem from "./SideBarShoppingCartItem";
 
 const SideBarShoppingCart = ({ setShowProductCard }) => {
   const router = useRouter();

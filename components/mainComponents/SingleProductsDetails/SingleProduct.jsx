@@ -8,7 +8,7 @@ import SingleProductDetails from "./Single.Product.Details";
 import SingleProductImages from "./Single.Product.Images";
 import SingleProductReview from "./Single.Product.Review";
 
-const ProductDetails = () => {
+const SingleProduct = () => {
   const [showProductDetails, setShowProductDetails] = useState("description");
   return (
     <>
@@ -79,4 +79,4 @@ const ProductDetails = () => {
   );
 };
 
-export default ProductDetails;
+export default SingleProduct;

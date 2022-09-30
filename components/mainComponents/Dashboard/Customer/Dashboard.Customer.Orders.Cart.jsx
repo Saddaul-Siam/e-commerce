@@ -2,10 +2,10 @@ import Link from "next/link";
 import React from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
 
-const SubCustomerOrderCart = ({ orders }) => {
+const DashboardCustomerOrdersCart = ({ orders }) => {
   return (
     <>
-      {orders.map(({ id, status, date, total }, i) => (
+      {orders.slice(0, 3).map(({ id, status, date, total }, i) => (
         <ul
           key={i}
           className="my-3 grid grid-cols-4 rounded-md bg-white py-5 px-5 text-base font-light text-gray-600 shadow"
@@ -31,4 +31,4 @@ const SubCustomerOrderCart = ({ orders }) => {
   );
 };
 
-export default SubCustomerOrderCart;
+export default DashboardCustomerOrdersCart;

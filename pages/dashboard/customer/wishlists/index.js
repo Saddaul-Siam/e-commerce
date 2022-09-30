@@ -1,11 +1,11 @@
 import React from "react";
 import { Footer, Navbar } from "../../../../components/sharedComponents";
-import DashboardNavigation from "../../../../components/subComponents/dashboard/Dashboard.Navigation";
-import { DashboardCustomersWishlists } from "../../../../components/mainComponents/CustomerDashboard";
+import { DashboardCustomersWishlists } from "../../../../components/mainComponents/Dashboard/Customer";
 import {
   userAccounts,
   userDashboard,
 } from "../../../../data/dashboard.navigation";
+import { DashboardNavigation } from "../../../../components/mainComponents/Dashboard/Commone";
 
 const Index = () => {
   return (

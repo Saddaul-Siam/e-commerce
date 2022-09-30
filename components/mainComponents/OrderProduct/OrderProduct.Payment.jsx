@@ -2,14 +2,10 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { FcOk } from "react-icons/fc";
 import { Footer, Navbar } from "../../sharedComponents";
+import {BkashPaymentDetails, NagodPaymentDetails, RocketPaymentDetails, SSLCommerzPaymentDetails} from "../Payment";
+import SelectPaymentOption from "./OrderProductSelectPaymentOption";
 import OrderSummaryCart from "./OrderSummaryCart";
-import {
-  BkashPaymentDetails,
-  SSLCommerzPaymentDetails,
-  NagodPaymentDetails,
-  RocketPaymentDetails,
-  SelectPaymentOption,
-} from "../../subComponents/payment";
+
 
 const OrderProductPayment = () => {
   const [payWith, setPayWith] = useState("bkash");

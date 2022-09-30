@@ -1,7 +1,7 @@
 import React from "react";
-import { DashboardCustomersOrders } from "../../../../components/mainComponents/CustomerDashboard";
+import { DashboardCustomersOrders } from "../../../../components/mainComponents/Dashboard/Customer";
 import { Footer, Navbar } from "../../../../components/sharedComponents";
-import DashboardNavigation from "../../../../components/subComponents/dashboard/Dashboard.Navigation";
+import { DashboardNavigation } from "../../../../components/mainComponents/Dashboard/Commone";
 import {
   userAccounts,
   userDashboard,

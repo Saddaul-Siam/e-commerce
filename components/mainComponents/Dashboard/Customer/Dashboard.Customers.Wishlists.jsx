@@ -1,8 +1,8 @@
 import React from "react";
 import { BsFillSuitHeartFill } from "react-icons/bs";
 import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
-import { products } from "../../../data/products";
-import ProductsCard from "../../sharedComponents/productsCard/Products.Card";
+import { products } from "../../../../data/products";
+import ProductsCard from "../../../sharedComponents/productsCard/Products.Card";
 
 const DashboardCustomersWishlists = () => {
   return (

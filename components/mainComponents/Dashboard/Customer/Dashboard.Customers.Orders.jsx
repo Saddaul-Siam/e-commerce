@@ -1,6 +1,6 @@
 import React from "react";
 import { FaShoppingBag } from "react-icons/fa";
-import SubCustomerOrderCart from "../../subComponents/dashboard/customer/Sub.Customer.Order.Cart";
+import DashboardCustomerOrdersCart from "./Dashboard.Customer.Orders.Cart";
 
 const DashboardCustomersOrders = () => {
   const orders = [
@@ -25,7 +25,7 @@ const DashboardCustomersOrders = () => {
           </ul>
         </div>
         <div>
-          <SubCustomerOrderCart orders={orders} />
+          <DashboardCustomerOrdersCart orders={orders} />
         </div>
       </div>
     </div>

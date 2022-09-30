@@ -1,8 +1,16 @@
 import Image from "next/image";
 import React from "react";
 import { MdAccountCircle } from "react-icons/md";
+import DashboardCustomerOrdersCart from "./Dashboard.Customer.Orders.Cart";
+import DashboardCustomersOrderDetailsCart from "./Dashboard.Customers.Order.Details.Cart";
 
 const DashboardCustomersProfile = () => {
+  const orders = [
+    { id: "15644621", status: "pending", date: "Sep 25, 2022", total: 600 },
+    { id: "15644621", status: "pending", date: "Sep 25, 2022", total: 600 },
+    { id: "15644621", status: "pending", date: "Sep 25, 2022", total: 600 },
+    { id: "15644621", status: "pending", date: "Sep 25, 2022", total: 600 },
+  ];
   return (
     <div className="mb-10">
       <div className="flex items-center justify-between">
@@ -65,24 +73,29 @@ const DashboardCustomersProfile = () => {
       <div className="flex justify-between rounded-md bg-white px-10 py-5">
         <div>
           <p className="text-xs text-gray-500">First Name</p>
-          <p className="text-base text-gray-600 leading-10">Saddaul</p>
+          <p className="text-base leading-10 text-gray-600">Saddaul</p>
         </div>
         <div>
           <p className="text-xs text-gray-500">Last Name</p>
-          <p className="text-base text-gray-600 leading-10">Siam</p>
+          <p className="text-base leading-10 text-gray-600">Siam</p>
         </div>
         <div>
           <p className="text-xs text-gray-500">Email</p>
-          <p className="text-base text-gray-600 leading-10">saddaul.siam@gmail.com</p>
+          <p className="text-base leading-10 text-gray-600">
+            saddaul.siam@gmail.com
+          </p>
         </div>
         <div>
           <p className="text-xs text-gray-500">Phone</p>
-          <p className="text-base text-gray-600 leading-10">+8801311333277</p>
+          <p className="text-base leading-10 text-gray-600">+8801311333277</p>
         </div>
         <div>
           <p className="text-xs text-gray-500">Birth date</p>
-          <p className="text-base text-gray-600 leading-10">26-08-2003</p>
+          <p className="text-base leading-10 text-gray-600">26-08-2003</p>
         </div>
+      </div>
+      <div>
+        <DashboardCustomersOrderDetailsCart orders={orders} />
       </div>
     </div>
   );
