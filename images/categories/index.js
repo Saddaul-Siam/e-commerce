@@ -21,7 +21,6 @@ const categories = [
   { id: 8, name: "Pets", img: pets },
   { id: 9, name: "Baby", img: babyToys },
   { id: 10, name: "Groceries", img: groceries },
-  { id: 10, name: "Groceries", img: groceries },
   { id: 10, name: "Automotive", img: automotive },
 ];
 

@@ -31,22 +31,42 @@ const Footer = () => {
           </div>
           <div className="col-span-12 sm:col-span-2 lg:col-span-2">
             <h2 className="text-2xl text-white">About Us</h2>
-            <ul className="cursor-pointer space-y-3 pt-5">
-              <li>Careers</li>
-              <li>Our Stores</li>
-              <li>Our Cares</li>
-              <li>Terms & Conditions</li>
-              <li>Privacy Policy</li>
+            <ul className="space-y-3 pt-5">
+              <li className="cursor-pointer underline-offset-2 hover:text-white hover:underline">
+                Careers
+              </li>
+              <li className="cursor-pointer underline-offset-2 hover:text-white hover:underline">
+                Our Stores
+              </li>
+              <li className="cursor-pointer underline-offset-2 hover:text-white hover:underline">
+                Our Cares
+              </li>
+              <li className="cursor-pointer underline-offset-2 hover:text-white hover:underline">
+                Terms & Conditions
+              </li>
+              <li className="cursor-pointer underline-offset-2 hover:text-white hover:underline">
+                Privacy Policy
+              </li>
             </ul>
           </div>
           <div className="col-span-12 sm:col-span-2 lg:col-span-3">
             <h2 className="text-2xl text-white">Customer Care</h2>
-            <ul className="cursor-pointer space-y-3 pt-5">
-              <li>Help Center</li>
-              <li>How to Buy</li>
-              <li>Track Your Order</li>
-              <li>Corporate & Bulk Purchasing</li>
-              <li>Returns & Refunds</li>
+            <ul className="space-y-3 pt-5">
+              <li className="cursor-pointer underline-offset-2 hover:text-white hover:underline">
+                Help Center
+              </li>
+              <li className="cursor-pointer underline-offset-2 hover:text-white hover:underline">
+                How to Buy
+              </li>
+              <li className="cursor-pointer underline-offset-2 hover:text-white hover:underline">
+                Track Your Order
+              </li>
+              <li className="cursor-pointer underline-offset-2 hover:text-white hover:underline">
+                Corporate & Bulk Purchasing
+              </li>
+              <li className="cursor-pointer underline-offset-2 hover:text-white hover:underline">
+                Returns & Refunds
+              </li>
             </ul>
           </div>
           <div className="col-span-12 sm:col-span-2 lg:col-span-3">

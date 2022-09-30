@@ -11,9 +11,9 @@ const NavbarMenu = ({ scroll }) => {
   const menu = [
     { name: "Home", href: "" },
     { name: "Pages", href: "" },
-    { name: "User Account", href: "/dashboard/customer/orders" },
+    { name: "User Account", href: "/dashboard/customer/profile" },
     { name: "Vendor Account", href: "" },
-    { name: "Track My Order", href: "" },
+    { name: "Track My Order", href: "/dashboard/customer/orders" },
   ];
   return (
     <div className="transform scroll-smooth transition duration-500 xl:container">

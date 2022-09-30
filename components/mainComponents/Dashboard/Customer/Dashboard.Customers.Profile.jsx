@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React from "react";
 import { MdAccountCircle } from "react-icons/md";
-import DashboardCustomerOrdersCart from "./Dashboard.Customer.Orders.Cart";
 import DashboardCustomersOrderDetailsCart from "./Dashboard.Customers.Order.Details.Cart";
 
 const DashboardCustomersProfile = () => {
@@ -95,7 +94,12 @@ const DashboardCustomersProfile = () => {
         </div>
       </div>
       <div>
-        <DashboardCustomersOrderDetailsCart orders={orders} />
+        {orders
+          .slice(0, 2)
+          .map((order, i) => (
+            <DashboardCustomersOrderDetailsCart key={i} orders={order} />
+          ))
+          .reverse()}
       </div>
     </div>
   );

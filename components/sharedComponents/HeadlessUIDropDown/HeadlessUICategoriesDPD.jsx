@@ -8,15 +8,6 @@ const HeadlessUICategoriesDPD = () => {
   function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
   }
-  const dropdownMenu = [
-    { name: "Fashion", href: "" },
-    { name: "Electronics", href: "" },
-    { name: "Home & Garden", href: "" },
-    { name: "Bikes", href: "" },
-    { name: " Health & Beauty", href: "" },
-    { name: "Baby Toys", href: "" },
-    { name: "Pets", href: "" },
-  ];
   return (
     <Transition
       as={Fragment}

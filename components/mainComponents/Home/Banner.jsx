@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React, { useState, useEffect, useRef, useCallback } from "react";
-import banners from "../../../images/banners/index";
-import categories from "../../../images/categories/index";
+import banners from "../../../images/banners";
+import categories from "../../../images/categories";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper";

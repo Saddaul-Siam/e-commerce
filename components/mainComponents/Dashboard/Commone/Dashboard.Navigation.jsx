@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import React from "react";
 
 const DashboardNavigation = ({ navData }) => {
-  console.log(navData);
   const { route } = useRouter();
   return (
     <ul>
