@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { MdAccountCircle } from "react-icons/md";
 import DashboardCustomersOrderDetailsCart from "./Dashboard.Customers.Order.Details.Cart";
@@ -17,9 +18,11 @@ const DashboardCustomersProfile = () => {
           <MdAccountCircle className="mr-3 inline text-red-500/90" />
           My Profile
         </h2>
-        <button className="bg-red-200 py-2 px-4 text-sm font-semibold text-red-500">
-          Edit Profile
-        </button>
+        <Link href="/dashboard/customer/profile/edit">
+          <button className="bg-red-200 py-2 px-4 text-sm font-semibold text-red-500">
+            Edit Profile
+          </button>
+        </Link>
       </div>
       <div className="my-8 grid grid-cols-1 gap-5 sm:grid-cols-2">
         <div>
