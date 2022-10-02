@@ -40,9 +40,11 @@ const DashboardCustomersAddresses = () => {
             Default Billing Address
           </p>
           <p className="col-span-1 flex justify-end text-xl">
-            <span className="inline-flex rounded-full p-3 hover:bg-slate-100">
-              <MdModeEdit />
-            </span>
+            <Link href="/dashboard/customer/addresses/edit">
+              <span className="inline-flex rounded-full p-3 hover:bg-slate-100">
+                <MdModeEdit />
+              </span>
+            </Link>
             <span className="inline-flex rounded-full p-3 hover:bg-slate-100">
               <AiFillDelete />
             </span>
@@ -65,9 +67,11 @@ const DashboardCustomersAddresses = () => {
             Default Billing Address
           </p>
           <p className="col-span-1 flex justify-end text-xl">
-            <span className="inline-flex rounded-full p-3 hover:bg-slate-100">
-              <MdModeEdit />
-            </span>
+            <Link href="/dashboard/customer/addresses/edit">
+              <span className="inline-flex rounded-full p-3 hover:bg-slate-100">
+                <MdModeEdit />
+              </span>
+            </Link>
             <span className="inline-flex rounded-full p-3 hover:bg-slate-100">
               <AiFillDelete />
             </span>

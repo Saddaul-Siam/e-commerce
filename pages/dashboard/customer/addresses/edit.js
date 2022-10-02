@@ -5,7 +5,7 @@ import {
 } from "../../../../data/dashboard.navigation";
 import { Footer, Navbar } from "../../../../components/sharedComponents";
 import { DashboardNavigation } from "../../../../components/mainComponents/Dashboard/Commone";
-import { DashboardCustomersAddressNew } from "../../../../components/mainComponents/Dashboard/Customer";
+import { DashboardCustomersAddressEdit } from "../../../../components/mainComponents/Dashboard/Customer";
 
 const Index = () => {
   return (
@@ -26,7 +26,7 @@ const Index = () => {
             </div>
           </div>
           <div className="col-span-3">
-            <DashboardCustomersAddressNew />
+            <DashboardCustomersAddressEdit />
           </div>
         </div>
       </div>
