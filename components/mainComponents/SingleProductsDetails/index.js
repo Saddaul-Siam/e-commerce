@@ -1,4 +1,5 @@
-export { default as SingleProductDescription } from "../SingleProductsDetails/Single.Product.Description";
-export { default as SingleProductDetails } from "../SingleProductsDetails/Single.Product.details";
-export { default as SingleProductImage } from "../SingleProductsDetails/Single.Product.Images";
-export { default as SingleProductReview } from "../SingleProductsDetails/Single.Product.Review";
+export { default as SingleProduct } from "./SingleProduct";
+export { default as SingleProductDescription } from "./Single.Product.Description";
+export { default as SingleProductDetails } from "./Single.Product.details";
+export { default as SingleProductImage } from "./Single.Product.Images";
+export { default as SingleProductReview } from "./Single.Product.Review";
