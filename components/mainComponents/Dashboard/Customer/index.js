@@ -4,3 +4,5 @@ export { default as DashboardCustomersOrderDetailsCart } from "./Dashboard.Custo
 export { default as DashboardCustomersWishlists } from "./Dashboard.Customers.Wishlists";
 export { default as DashboardCustomersProfile } from "./Dashboard.Customers.Profile";
 export { default as DashboardCustomersProfileEdit } from "./Dashboard.Customers.Profile.Edit";
+export { default as DashboardCustomersAddresses } from "./Dashboard.Customers.Addresses";
+export { default as DashboardCustomersAddressNew } from "./Dashboard.Customers.Address.New";

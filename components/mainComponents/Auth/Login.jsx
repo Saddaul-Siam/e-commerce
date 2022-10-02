@@ -59,7 +59,7 @@ const Login = () => {
           <div className="flex justify-center">
             <p className="mt-3 text-sm text-gray-500">
               Don’t have account ?{" "}
-              <Link href="/register">
+              <Link href="/register" passHref>
                 <span className="cursor-pointer text-base font-medium text-black underline">
                   Sign Up
                 </span>
