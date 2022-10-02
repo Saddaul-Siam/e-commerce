@@ -4,15 +4,21 @@ import React from "react";
 const DashboardCustomersOrderDetailsCart = () => {
   return (
     <>
-      <div className="mt-10 grid grid-cols-3 bg-slate-200 px-5 py-5">
-        <p className="text-sm text-gray-500">
-          Order ID: <b>9001997718074513</b>
+      <div className="mt-10 grid grid-cols-3 bg-slate-200 px-5 py-5 text-xs text-gray-500 sm:text-sm">
+        <p className="">
+          Order ID:
+          <br className="sm:hidden" />
+          <b>9001997718074513</b>
         </p>
-        <p className="text-sm text-gray-500">
-          Placed on: <b>25 Sep, 2022</b>
+        <p className="">
+          Placed on:
+          <br className="sm:hidden" />
+          <b>25 Sep, 2022</b>
         </p>
-        <p className="text-sm text-gray-500">
-          Delivered on: <b>4th October, 2022</b>
+        <p className="">
+          Delivered on:
+          <br className="sm:hidden" />
+          <b>4th October, 2022</b>
         </p>
       </div>
       <div>

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { MdAccountCircle } from "react-icons/md";
 import DashboardCustomersOrderDetailsCart from "./Dashboard.Customers.Order.Details.Cart";
 
@@ -18,11 +19,16 @@ const DashboardCustomersProfile = () => {
           <MdAccountCircle className="mr-3 inline text-red-500/90" />
           My Profile
         </h2>
-        <Link href="/dashboard/customer/profile/edit">
-          <button className="bg-red-200 py-2 px-4 text-sm font-semibold text-red-500">
-            Edit Profile
-          </button>
-        </Link>
+        <div className="hidden lg:block">
+          <Link href="/dashboard/customer/profile/edit">
+            <button className="bg-red-200 py-2 px-4 text-sm font-semibold text-red-500">
+              Edit Profile
+            </button>
+          </Link>
+        </div>
+        <button className="text-2xl font-thin lg:hidden">
+          <GiHamburgerMenu />
+        </button>
       </div>
       <div className="my-8 grid grid-cols-1 gap-5 sm:grid-cols-2">
         <div>
@@ -72,14 +78,10 @@ const DashboardCustomersProfile = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-between rounded-md bg-white px-10 py-5">
+      <div className="grid grid-cols-2 gap-y-3 rounded-md bg-white px-3 py-5 sm:grid-cols-4 sm:gap-x-24 xl:gap-x-3 ">
         <div>
-          <p className="text-xs text-gray-500">First Name</p>
-          <p className="text-base leading-10 text-gray-600">Saddaul</p>
-        </div>
-        <div>
-          <p className="text-xs text-gray-500">Last Name</p>
-          <p className="text-base leading-10 text-gray-600">Siam</p>
+          <p className="text-xs text-gray-500">Full Name</p>
+          <p className="text-base leading-10 text-gray-600">Saddaul Siam</p>
         </div>
         <div>
           <p className="text-xs text-gray-500">Email</p>

@@ -15,7 +15,7 @@ const Footer = () => {
   return (
     <div className="bg-[#0F3460] py-20 px-10 lg:px-3 xl:px-0">
       <div className="container">
-        <div className="grid grid-cols-12 gap-3 text-gray-400">
+        <div className="grid grid-cols-12 gap-5 text-gray-400 sm:gap-0">
           <div className="col-span-12 space-y-3 sm:col-span-6 lg:col-span-4">
             <p>
               <Image src={logo} alt="" />

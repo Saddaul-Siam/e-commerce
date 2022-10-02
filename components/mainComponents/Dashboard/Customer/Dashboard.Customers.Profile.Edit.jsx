@@ -18,7 +18,7 @@ const DashboardCustomersProfileEdit = () => {
           </button>
         </Link>
       </div>
-      <div className="mt-10 rounded-md bg-white p-5">
+      <div className="mt-5 rounded-md bg-white p-5">
         <div className="relative inline-flex">
           <Image
             height="60"
@@ -37,7 +37,8 @@ const DashboardCustomersProfileEdit = () => {
               First Name
             </label>
             <input
-              className="h-10 w-full rounded border outline-1 focus:outline-red-500/90"
+              className="h-10 w-full rounded border px-2 text-sm outline-1 focus:outline-red-500/90"
+              placeholder="First Name"
               type="text"
               required
               name="first-name"
@@ -49,7 +50,8 @@ const DashboardCustomersProfileEdit = () => {
               Last Name
             </label>
             <input
-              className="h-10 w-full rounded border outline-1 focus:outline-red-500/90"
+              className="h-10 w-full rounded border px-2 text-sm outline-1 focus:outline-red-500/90"
+              placeholder="Last Name"
               type="text"
               required
               name="last-name"
@@ -61,7 +63,8 @@ const DashboardCustomersProfileEdit = () => {
               Email
             </label>
             <input
-              className="h-10 w-full rounded border outline-1 focus:outline-red-500/90"
+              className="h-10 w-full rounded border px-2 outline-1 focus:outline-red-500/90"
+              placeholder="Email"
               type="email"
               required
               name="email"
@@ -73,7 +76,8 @@ const DashboardCustomersProfileEdit = () => {
               Phone Number
             </label>
             <input
-              className="h-10 w-full rounded border outline-1 focus:outline-red-500/90"
+              className="h-10 w-full rounded border px-2 outline-1 focus:outline-red-500/90"
+              placeholder="Email"
               type="number"
               required
               name="phone-number"
@@ -85,7 +89,7 @@ const DashboardCustomersProfileEdit = () => {
               Birth date
             </label>
             <input
-              className="h-10 w-full rounded border outline-1 focus:outline-red-500/90"
+              className="h-10 px-2 w-full rounded border outline-1 focus:outline-red-500/90"
               type="date"
               required
               name="date-of-birth"
