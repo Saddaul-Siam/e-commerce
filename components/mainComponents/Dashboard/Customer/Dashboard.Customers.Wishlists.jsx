@@ -8,7 +8,7 @@ const DashboardCustomersWishlists = () => {
   return (
     <div className="mb-10">
       <div className="flex items-center justify-between">
-        <h2 className="text-xl font-semibold text-gray-700">
+        <h2 className="flex items-center text-2xl font-semibold text-gray-700">
           <BsFillSuitHeartFill className="mr-3 inline text-red-500/90" />
           My Wish List
         </h2>

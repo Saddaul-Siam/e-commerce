@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { FaShoppingBag } from "react-icons/fa";
 import { BsBoxSeam } from "react-icons/bs";
 import { TbTruckDelivery } from "react-icons/tb";
@@ -8,11 +9,16 @@ import DashboardCustomersOrderDetailsCart from "./Dashboard.Customers.Order.Deta
 const DashboardCustomersOrderDetails = () => {
   return (
     <div className="mb-10">
-      <div>
-        <h2 className="text-xl font-semibold text-gray-700">
-          <FaShoppingBag className="mr-3 inline text-red-500/90" />
-          Order Details
+      <div className="flex items-center justify-between">
+        <h2 className="flex items-center text-2xl font-semibold text-gray-700">
+          <FaShoppingBag className="mr-3 inline text-2xl text-red-500/90" />
+          My Orders
         </h2>
+        <Link href="/dashboard/customer/orders">
+          <button className="bg-red-200 py-2 px-4 text-sm font-semibold text-red-500">
+            Back To Orders
+          </button>
+        </Link>
       </div>
       <div className="mt-10 rounded-md bg-white px-5 py-10 shadow">
         <div className="flex items-center ">

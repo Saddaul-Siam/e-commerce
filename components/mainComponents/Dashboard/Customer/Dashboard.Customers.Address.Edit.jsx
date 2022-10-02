@@ -7,7 +7,7 @@ const DashboardCustomersAddressEdit = () => {
   return (
     <div>
       <div className="flex items-center justify-between">
-        <h2 className="text-2xl font-semibold text-gray-700">
+        <h2 className="flex items-center text-2xl font-semibold text-gray-700">
           <MdLocationPin className="mr-3 inline text-3xl text-red-500/90" />
           Edit Address
         </h2>
