@@ -13,10 +13,10 @@ import {
 
 const Footer = () => {
   return (
-    <div className="bg-[#0F3460] py-20">
+    <div className="bg-[#0F3460] py-20 px-10 lg:px-3 xl:px-0">
       <div className="container">
         <div className="grid grid-cols-12 gap-3 text-gray-400">
-          <div className="col-span-12 space-y-3 sm:col-span-2 lg:col-span-4">
+          <div className="col-span-12 space-y-3 sm:col-span-6 lg:col-span-4">
             <p>
               <Image src={logo} alt="" />
             </p>
@@ -29,7 +29,7 @@ const Footer = () => {
               <Image src={googlePlay} alt="" />
             </p>
           </div>
-          <div className="col-span-12 sm:col-span-2 lg:col-span-2">
+          <div className="col-span-12 sm:col-span-6 lg:col-span-2">
             <h2 className="text-2xl text-white">About Us</h2>
             <ul className="space-y-3 pt-5">
               <li className="cursor-pointer underline-offset-2 hover:text-white hover:underline">
@@ -49,7 +49,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="col-span-12 sm:col-span-2 lg:col-span-3">
+          <div className="col-span-12 sm:col-span-6 lg:col-span-3">
             <h2 className="text-2xl text-white">Customer Care</h2>
             <ul className="space-y-3 pt-5">
               <li className="cursor-pointer underline-offset-2 hover:text-white hover:underline">
@@ -69,7 +69,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="col-span-12 sm:col-span-2 lg:col-span-3">
+          <div className="col-span-12 sm:col-span-6 lg:col-span-3">
             <h2 className="text-2xl text-white">Contact Us</h2>
             <ul className="space-y-3 pt-5">
               <li>

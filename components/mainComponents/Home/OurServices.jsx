@@ -6,7 +6,7 @@ import { AiOutlineSafety } from "react-icons/ai";
 
 const OurServices = () => {
   return (
-    <div className="bg-[#e6ebf1] pb-16">
+    <div className="bg-[#e6ebf1] px-3 pb-16 xl:px-0">
       <div className="container">
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           <div className="flex flex-col items-center justify-center space-y-3 rounded-md bg-white px-6 py-10 shadow-sm hover:shadow-lg">

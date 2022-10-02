@@ -18,7 +18,7 @@ const AllCatagories = () => {
     "Groceries",
   ];
   return (
-    <div className="bg-[#e6ebf1] pb-16">
+    <div className="bg-[#e6ebf1] px-3 pb-16 xl:px-0">
       <div className="container">
         <div className="flex justify-between">
           <h2 className="pb-5 text-2xl font-bold italic text-gray-700">
@@ -33,7 +33,7 @@ const AllCatagories = () => {
           {categories.map((category, i) => (
             <div
               key={i}
-              className="flex h-20 cursor-pointer items-center justify-center rounded-md border bg-white hover:shadow-lg font-semibold text-gray-600"
+              className="flex h-20 cursor-pointer items-center justify-center rounded-md border bg-white font-semibold text-gray-600 hover:shadow-lg"
             >
               {category}
             </div>

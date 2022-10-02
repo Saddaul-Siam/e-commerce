@@ -6,7 +6,7 @@ import { SwiperCatagoriesCard } from "../../sharedComponents";
 
 const TopCategories = () => {
   return (
-    <div className="bg-[#e6ebf1] pb-16">
+    <div className="bg-[#e6ebf1] px-3 pb-16 xl:px-0">
       <div className="container">
         <div className="flex justify-between">
           <h2 className="pb-5 text-2xl font-bold italic text-gray-700">
