@@ -1,7 +1,7 @@
 import Head from "next/head";
 import React from "react";
 import { SingleProduct } from "../../components/mainComponents/SingleProductsDetails";
-import { Footer, Navbar } from "../../components/sharedComponents";
+import { BottomBar, Footer, Navbar } from "../../components/sharedComponents";
 
 const SingleProductPage = () => {
   return (
@@ -12,6 +12,7 @@ const SingleProductPage = () => {
       </Head>
       <Navbar />
       <SingleProduct />
+      <BottomBar />
       <Footer />
     </>
   );
