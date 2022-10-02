@@ -13,7 +13,7 @@ const Index = () => {
       <Navbar />
       <div className="container mt-44 pb-5">
         <div className="grid grid-cols-4 gap-5 pt-5">
-          <div className="col-span-1">
+          <div className="hidden lg:col-span-1 lg:block">
             <div className="my-1 rounded-md bg-white p-2">
               <h2 className="ml-3 pb-5 text-base font-medium text-gray-600">
                 DASHBOARD
@@ -25,7 +25,7 @@ const Index = () => {
               <DashboardNavigation navData={userAccounts} />
             </div>
           </div>
-          <div className="col-span-3">
+          <div className="col-span-4 lg:col-span-3">
             <DashboardCustomersAddresses />
           </div>
         </div>
