@@ -11,7 +11,7 @@ const Index = () => {
   return (
     <>
       <Navbar />
-      <div className="container mt-44">
+      <div className="container mt-44 pb-5">
         <div className="grid grid-cols-4 gap-5 pt-5">
           <div className="col-span-1">
             <div className="my-1 rounded-md bg-white p-2">
