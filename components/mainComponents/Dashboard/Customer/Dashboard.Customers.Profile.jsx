@@ -14,22 +14,27 @@ const DashboardCustomersProfile = () => {
   ];
   return (
     <div className="mb-10">
-      <div className="flex items-center justify-between">
-        <h2 className="flex items-center text-2xl font-semibold text-gray-700">
-          <MdAccountCircle className="mr-3 inline text-red-500/90" />
-          My Profile
-        </h2>
-        <div className="hidden lg:block">
+      <div className="grid grid-cols-2 gap-y-5">
+        <div className="flex items-center">
+          <h2 className="text-2xl font-semibold text-gray-700">
+            <MdAccountCircle className="mr-3 inline text-red-500/90" />
+            <span> My Profile</span>
+          </h2>
+        </div>
+        <div className="flex justify-end lg:hidden">
+          <button className="text-2xl font-thin ">
+            <GiHamburgerMenu />
+          </button>
+        </div>
+        <div className="flex lg:justify-end">
           <Link href="/dashboard/customer/profile/edit">
             <button className="bg-red-200 py-2 px-4 text-sm font-semibold text-red-500">
               Edit Profile
             </button>
           </Link>
         </div>
-        <button className="text-2xl font-thin lg:hidden">
-          <GiHamburgerMenu />
-        </button>
       </div>
+
       <div className="my-8 grid grid-cols-1 gap-5 sm:grid-cols-2">
         <div>
           <div className="flex items-center justify-between rounded-md bg-white px-10 py-5">

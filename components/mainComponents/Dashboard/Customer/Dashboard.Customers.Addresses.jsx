@@ -1,21 +1,31 @@
 import Link from "next/link";
 import React from "react";
 import { AiFillDelete } from "react-icons/ai";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { MdLocationPin, MdModeEdit } from "react-icons/md";
 
 const DashboardCustomersAddresses = () => {
   return (
     <div>
-      <div className="flex items-center justify-between">
-        <h2 className="flex items-center text-2xl font-semibold text-gray-700">
-          <MdLocationPin className="mr-3 inline text-3xl text-red-500/90" />
-          My Addresses
-        </h2>
-        <Link href="/dashboard/customer/addresses/new">
-          <button className="bg-red-200 py-2 px-4 text-sm font-semibold text-red-500">
-            Add New Addresses
+      <div className="grid grid-cols-2 gap-y-5">
+        <div className="flex items-center">
+          <h2 className="text-2xl font-semibold text-gray-700">
+            <MdLocationPin className="mr-3 inline text-3xl text-red-500/90" />
+            <span> My Profile</span>
+          </h2>
+        </div>
+        <div className="flex justify-end lg:hidden">
+          <button className="text-2xl font-thin ">
+            <GiHamburgerMenu />
           </button>
-        </Link>
+        </div>
+        <div className="flex lg:justify-end">
+          <Link href="/dashboard/customer/addresses/new">
+            <button className="bg-red-200 py-2 px-4 text-sm font-semibold text-red-500">
+              Add New Addresses
+            </button>
+          </Link>
+        </div>
       </div>
       <div className="mt-5 bg-white p-5">
         <div className="grid grid-cols-12 gap-5 rounded-md bg-slate-300/80 p-3 text-base text-gray-600">

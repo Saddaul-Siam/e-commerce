@@ -1,22 +1,32 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { BsFillCameraFill } from "react-icons/bs";
 import { MdAccountCircle } from "react-icons/md";
 
 const DashboardCustomersProfileEdit = () => {
   return (
     <div className="mb-10">
-      <div className="flex items-center justify-between">
-        <h2 className="flex items-center text-2xl font-semibold text-gray-700">
-          <MdAccountCircle className="mr-3 inline text-red-500/90" />
-          Edit Profile
-        </h2>
-        <Link href="/dashboard/customer/profile">
-          <button className="bg-red-200 py-2 px-4 text-sm font-semibold text-red-500">
-            Back Profile
+      <div className="grid grid-cols-2 gap-y-5">
+        <div className="flex items-center">
+          <h2 className="text-2xl font-semibold text-gray-700">
+            <MdAccountCircle className="mr-3 inline text-red-500/90" />
+            <span> Edit Profile</span>
+          </h2>
+        </div>
+        <div className="flex justify-end lg:hidden">
+          <button className="text-2xl font-thin ">
+            <GiHamburgerMenu />
           </button>
-        </Link>
+        </div>
+        <div className="flex lg:justify-end">
+          <Link href="/dashboard/customer/profile">
+            <button className="bg-red-200 py-2 px-4 text-sm font-semibold text-red-500">
+              Back Profile
+            </button>
+          </Link>
+        </div>
       </div>
       <div className="mt-5 rounded-md bg-white p-5">
         <div className="relative inline-flex">
@@ -89,7 +99,7 @@ const DashboardCustomersProfileEdit = () => {
               Birth date
             </label>
             <input
-              className="h-10 px-2 w-full rounded border outline-1 focus:outline-red-500/90"
+              className="h-10 w-full rounded border px-2 outline-1 focus:outline-red-500/90"
               type="date"
               required
               name="date-of-birth"

@@ -18,7 +18,7 @@ const DashboardCustomersOrders = () => {
           <FaShoppingBag className="mr-3 inline text-2xl text-red-500/90" />
           My Orders
         </h2>
-        <button className="text-2xl font-thin">
+        <button className="text-2xl font-thin lg:hidden">
           <GiHamburgerMenu />
         </button>
       </div>

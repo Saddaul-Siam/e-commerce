@@ -1,5 +1,6 @@
 import React from "react";
 import { BsFillSuitHeartFill } from "react-icons/bs";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
 import { products } from "../../../../data/products";
 import ProductsCard from "../../../sharedComponents/productsCard/Products.Card";
@@ -7,14 +8,23 @@ import ProductsCard from "../../../sharedComponents/productsCard/Products.Card";
 const DashboardCustomersWishlists = () => {
   return (
     <div className="mb-10">
-      <div className="flex items-center justify-between">
-        <h2 className="flex items-center text-2xl font-semibold text-gray-700">
-          <BsFillSuitHeartFill className="mr-3 inline text-red-500/90" />
-          My Wish List
-        </h2>
-        <button className="bg-red-200 py-2 px-4 text-sm font-semibold text-red-500">
-          Add All To Cart
-        </button>
+      <div className="grid grid-cols-2 gap-y-5">
+        <div className="flex items-center">
+          <h2 className="text-2xl font-semibold text-gray-700">
+            <BsFillSuitHeartFill className="mr-3 inline text-red-500/90" />
+            <span> My Wish List</span>
+          </h2>
+        </div>
+        <div className="flex justify-end lg:hidden">
+          <button className="text-2xl font-thin ">
+            <GiHamburgerMenu />
+          </button>
+        </div>
+        <div className="flex lg:justify-end">
+          <button className="bg-red-200 py-2 px-4 text-sm font-semibold text-red-500">
+            Add All To Cart
+          </button>
+        </div>
       </div>
       <div className="pt-5 ">
         <div className="bg-whit grid grid-cols-2 gap-x-3 gap-y-10 rounded-md sm:grid-cols-3 lg:grid-cols-4 ">
