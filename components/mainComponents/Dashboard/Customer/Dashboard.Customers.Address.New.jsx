@@ -1,10 +1,13 @@
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdLocationPin } from "react-icons/md";
+import { DashboardSideBarNavigation } from "../Commone";
 import DashboardCustomersAddressFillUpForm from "./Dashboard.Customers.Address.FillUp.Form";
 
 const DashboardCustomersAddressNew = () => {
+  const [showSideNavigation, setShowSideNavigation] = useState(null);
+
   return (
     <div>
       <div className="grid grid-cols-2 gap-y-5">
@@ -15,7 +18,10 @@ const DashboardCustomersAddressNew = () => {
           </h2>
         </div>
         <div className="flex justify-end lg:hidden">
-          <button className="text-2xl font-thin ">
+          <button
+            className="text-2xl font-thin "
+            onClick={() => setShowSideNavigation(true)}
+          >
             <GiHamburgerMenu />
           </button>
         </div>
@@ -28,6 +34,11 @@ const DashboardCustomersAddressNew = () => {
         </div>
       </div>
       <DashboardCustomersAddressFillUpForm />
+      {showSideNavigation && (
+        <DashboardSideBarNavigation
+          setShowSideNavigation={setShowSideNavigation}
+        />
+      )}
     </div>
   );
 };

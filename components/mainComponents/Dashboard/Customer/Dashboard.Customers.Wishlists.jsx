@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { BsFillSuitHeartFill } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
 import { products } from "../../../../data/products";
 import ProductsCard from "../../../sharedComponents/productsCard/Products.Card";
+import DashboardSideBarNavigation from "../Commone/Dashboard.SideBar.Navigation";
 
 const DashboardCustomersWishlists = () => {
+  const [showSideNavigation, setShowSideNavigation] = useState(false);
   return (
     <div className="mb-10">
       <div className="grid grid-cols-2 gap-y-5">
@@ -16,7 +18,10 @@ const DashboardCustomersWishlists = () => {
           </h2>
         </div>
         <div className="flex justify-end lg:hidden">
-          <button className="text-2xl font-thin ">
+          <button
+            className="text-2xl font-thin "
+            onClick={() => setShowSideNavigation(true)}
+          >
             <GiHamburgerMenu />
           </button>
         </div>
@@ -50,6 +55,11 @@ const DashboardCustomersWishlists = () => {
           </li>
         </ul>
       </div>
+      {showSideNavigation && (
+        <DashboardSideBarNavigation
+          setShowSideNavigation={setShowSideNavigation}
+        />
+      )}
     </div>
   );
 };

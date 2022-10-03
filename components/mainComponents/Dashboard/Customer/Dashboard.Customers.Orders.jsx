@@ -1,10 +1,11 @@
-import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { FaShoppingBag } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { DashboardSideBarNavigation } from "../Commone";
 import DashboardCustomerOrdersCart from "./Dashboard.Customer.Orders.Cart";
 
 const DashboardCustomersOrders = () => {
+  const [showSideNavigation, setShowSideNavigation] = useState(false);
   const orders = [
     { id: "15644621", status: "pending", date: "Sep 25, 2022", total: 600 },
     { id: "15644621", status: "pending", date: "Sep 25, 2022", total: 600 },
@@ -18,7 +19,10 @@ const DashboardCustomersOrders = () => {
           <FaShoppingBag className="mr-3 inline text-2xl text-red-500/90" />
           My Orders
         </h2>
-        <button className="text-2xl font-thin lg:hidden">
+        <button
+          className="text-2xl font-thin lg:hidden"
+          onClick={() => setShowSideNavigation(true)}
+        >
           <GiHamburgerMenu />
         </button>
       </div>
@@ -35,6 +39,11 @@ const DashboardCustomersOrders = () => {
           <DashboardCustomerOrdersCart orders={orders} />
         </div>
       </div>
+      {showSideNavigation && (
+        <DashboardSideBarNavigation
+          setShowSideNavigation={setShowSideNavigation}
+        />
+      )}
     </div>
   );
 };

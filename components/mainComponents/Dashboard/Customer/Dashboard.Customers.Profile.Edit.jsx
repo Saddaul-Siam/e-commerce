@@ -1,11 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BsFillCameraFill } from "react-icons/bs";
 import { MdAccountCircle } from "react-icons/md";
+import {DashboardSideBarNavigation} from "../Commone";
 
 const DashboardCustomersProfileEdit = () => {
+  const [showSideNavigation, setShowSideNavigation] = useState(null);
   return (
     <div className="mb-10">
       <div className="grid grid-cols-2 gap-y-5">
@@ -16,7 +18,10 @@ const DashboardCustomersProfileEdit = () => {
           </h2>
         </div>
         <div className="flex justify-end lg:hidden">
-          <button className="text-2xl font-thin ">
+          <button
+            className="text-2xl font-thin "
+            onClick={() => setShowSideNavigation(true)}
+          >
             <GiHamburgerMenu />
           </button>
         </div>
@@ -110,7 +115,12 @@ const DashboardCustomersProfileEdit = () => {
         <button className="mt-5 rounded-md bg-red-500/90 bg-white py-2 px-4 text-sm font-semibold text-white">
           Save Changes
         </button>
-      </div>
+      </div>{" "}
+      {showSideNavigation && (
+        <DashboardSideBarNavigation
+          setShowSideNavigation={setShowSideNavigation}
+        />
+      )}
     </div>
   );
 };

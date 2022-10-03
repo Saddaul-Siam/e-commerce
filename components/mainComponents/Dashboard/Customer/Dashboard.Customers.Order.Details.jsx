@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { FaShoppingBag } from "react-icons/fa";
 import { BsBoxSeam } from "react-icons/bs";
@@ -6,8 +6,10 @@ import { TbTruckDelivery } from "react-icons/tb";
 import { FcCheckmark } from "react-icons/fc";
 import DashboardCustomersOrderDetailsCart from "./Dashboard.Customers.Order.Details.Cart";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { DashboardSideBarNavigation } from "../Commone";
 
 const DashboardCustomersOrderDetails = () => {
+  const [showSideNavigation, setShowSideNavigation] = useState(null);
   return (
     <div className="mb-10">
       <div className="grid grid-cols-2 gap-y-5">
@@ -18,7 +20,10 @@ const DashboardCustomersOrderDetails = () => {
           </h2>
         </div>
         <div className="flex justify-end lg:hidden">
-          <button className="text-2xl font-thin ">
+          <button
+            className="text-2xl font-thin "
+            onClick={() => setShowSideNavigation(true)}
+          >
             <GiHamburgerMenu />
           </button>
         </div>
@@ -89,6 +94,11 @@ const DashboardCustomersOrderDetails = () => {
           <p className="text-gray-500">Paid by Credit/Debit Card</p>
         </div>
       </div>
+      {showSideNavigation && (
+        <DashboardSideBarNavigation
+          setShowSideNavigation={setShowSideNavigation}
+        />
+      )}
     </div>
   );
 };

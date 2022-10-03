@@ -1,11 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdAccountCircle } from "react-icons/md";
+import DashboardSideBarNavigation from "../Commone/Dashboard.SideBar.Navigation";
 import DashboardCustomersOrderDetailsCart from "./Dashboard.Customers.Order.Details.Cart";
 
 const DashboardCustomersProfile = () => {
+  const [showSideNavigation, setShowSideNavigation] = useState(null);
   const orders = [
     { id: "15644621", status: "pending", date: "Sep 25, 2022", total: 600 },
     { id: "15644621", status: "pending", date: "Sep 25, 2022", total: 600 },
@@ -22,7 +24,10 @@ const DashboardCustomersProfile = () => {
           </h2>
         </div>
         <div className="flex justify-end lg:hidden">
-          <button className="text-2xl font-thin ">
+          <button
+            className="text-2xl font-thin "
+            onClick={() => setShowSideNavigation(true)}
+          >
             <GiHamburgerMenu />
           </button>
         </div>
@@ -111,6 +116,11 @@ const DashboardCustomersProfile = () => {
           ))
           .reverse()}
       </div>
+      {showSideNavigation && (
+        <DashboardSideBarNavigation
+          setShowSideNavigation={setShowSideNavigation}
+        />
+      )}
     </div>
   );
 };
