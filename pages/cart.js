@@ -1,11 +1,15 @@
 import React from "react";
 import { OrderProductCart } from "../components/mainComponents/OrderProduct";
+import { BottomBar, Footer, Navbar } from "../components/sharedComponents";
 
 const Cart = () => {
   return (
-    <div>
+    <>
+      <Navbar />
       <OrderProductCart />
-    </div>
+      <BottomBar />
+      <Footer />
+    </>
   );
 };
 

@@ -7,7 +7,6 @@ import OrderSummaryCart from "./OrderSummaryCart";
 const OrderProductCart = () => {
   return (
     <div className="bg-slate-200">
-      <Navbar />
       <div className="container mt-28 lg:mt-[10.9rem]">
         <div className="flex items-center py-10">
           <Link href="/cart">
@@ -137,7 +136,6 @@ const OrderProductCart = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };
