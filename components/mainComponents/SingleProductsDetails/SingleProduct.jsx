@@ -1,8 +1,7 @@
-import Head from "next/head";
 import Link from "next/link";
 import React, { useState } from "react";
 import { products } from "../../../data/products";
-import { Footer, Navbar, ProductCard } from "../../sharedComponents";
+import { ProductCard } from "../../sharedComponents";
 import SingleProductDescription from "./Single.Product.Description";
 import SingleProductDetails from "./Single.Product.Details";
 import SingleProductImages from "./Single.Product.Images";
