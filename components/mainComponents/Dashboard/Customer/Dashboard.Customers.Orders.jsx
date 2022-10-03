@@ -28,7 +28,7 @@ const DashboardCustomersOrders = () => {
       </div>
       <div>
         <div>
-          <ul className="mt-8 grid grid-cols-4 px-5 text-base font-semibold text-gray-500">
+          <ul className="mt-8 grid grid-cols-4 px-5 sm:text-base text-sm font-semibold text-gray-500">
             <li>Order #</li>
             <li>Status</li>
             <li>Date Purchased</li>
