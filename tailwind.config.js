@@ -12,7 +12,11 @@ module.exports = {
       center: true,
     },
   },
+  daisyui: {
+    themes: false,
+  },
   plugins: [
+    require("daisyui"),
     require("@tailwindcss/aspect-ratio"),
     function ({ addComponents }) {
       addComponents({

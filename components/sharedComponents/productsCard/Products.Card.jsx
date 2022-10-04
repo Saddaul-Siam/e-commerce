@@ -59,7 +59,7 @@ const ProductsCard = ({ product }) => {
               </div>
             </div>
             {/* Card Discount */}
-            <div className="absolute top-2 left-2 rounded-full bg-green-600/90 px-2 py-0.5 text-sm text-white">
+            <div className="absolute top-2 left-2 rounded-full bg-red-500/90 px-2 py-0.5 text-sm text-white">
               50% off
             </div>
             {/* Card Icons */}
