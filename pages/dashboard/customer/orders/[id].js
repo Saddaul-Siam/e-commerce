@@ -15,7 +15,7 @@ const Index = () => {
     <>
       <Navbar />
       <div className="bg-[#F6F9FC] px-3 xl:px-0">
-        <div className="container mt-28 pb-5 lg:mt-44">
+        <div className="container mt-32 pb-5 lg:mt-48">
           <div className="grid grid-cols-4 gap-5 pt-5">
             <div className="col-span-0 hidden lg:col-span-1 lg:block">
               <div className="my-1 rounded-md bg-white py-5 px-3">

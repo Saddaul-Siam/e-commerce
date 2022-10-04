@@ -7,7 +7,7 @@ const OrderProductDetails = () => {
   return (
     <div className="bg-slate-200">
       <Navbar />
-      <div className="container mt-28 lg:mt-[10.9rem] ">
+      <div className="container mt-32 lg:mt-[10.9rem] ">
         <div className="flex items-center py-10">
           <Link href="/cart">
             <p className="cursor-pointer rounded-full bg-red-500/90 py-2 px-6 text-sm font-semibold text-white">

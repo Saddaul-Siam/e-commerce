@@ -11,7 +11,7 @@ const SingleProduct = () => {
   const [showProductDetails, setShowProductDetails] = useState("description");
   return (
     <>
-      <div className="mt-28 flex h-20 items-center justify-center bg-slate-200 lg:mt-[10.9rem]">
+      <div className="mt-32 flex h-20 items-center justify-center bg-slate-200 lg:mt-[10.9rem]">
         <p className="text-base font-medium capitalize ">
           <Link href="/">
             <a className="hover:text-blue-800">Home </a>
@@ -28,7 +28,7 @@ const SingleProduct = () => {
             <SingleProductDetails />
           </div>
           {/* description */}
-          <div className="mt-28">
+          <div className="mt-32">
             <div className="flex justify-center space-x-10 border-b text-2xl text-gray-600">
               <p
                 className={`cursor-pointer ${
