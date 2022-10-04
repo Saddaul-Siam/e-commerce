@@ -41,7 +41,7 @@ const Banner = () => {
   }, [updateIndex]);
   return (
     <div
-      className="mt-36 lg:mt-[12.3rem]"
+      className="mt-36 lg:mt-[12.2rem]"
       style={{
         backgroundColor: currentBg[currentSlide],
       }}
