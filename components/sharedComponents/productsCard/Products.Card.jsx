@@ -15,7 +15,6 @@ const ProductsCard = ({ product }) => {
   let [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      {/* <Link href={`/product/${product.id}`}> */}
       <div className="relative">
         <div
           key={product.id}
@@ -31,10 +30,12 @@ const ProductsCard = ({ product }) => {
           <div className="m-2 mt-4 flex justify-between">
             <div className="space-y-2">
               <h3 className="text-base font-semibold text-gray-600">
-                <a href={product.href}>
-                  <span aria-hidden="true" className="absolute inset-0" />
-                  {product.name}
-                </a>
+                <Link href={`/product/${product.id}`}>
+                  <a>
+                    <span aria-hidden="true" className="absolute inset-0" />
+                    {product.name}
+                  </a>
+                </Link>
               </h3>
               <p className="flex text-base text-yellow-400 ">
                 <AiFillStar />
@@ -81,7 +82,6 @@ const ProductsCard = ({ product }) => {
           </div>
         </div>
       </div>
-      {/* </Link> */}
       <ProductsModal isOpen={isOpen} setIsOpen={setIsOpen} />
     </>
   );

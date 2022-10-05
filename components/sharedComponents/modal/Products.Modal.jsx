@@ -35,7 +35,7 @@ export default function ProductsModal({ setIsOpen, isOpen }) {
             <div className="fixed inset-0 overflow-y-auto">
               <div className="flex min-h-full items-center justify-center p-4 text-center">
                 <Dialog.Panel
-                  className="w-full max-w-xl transform overflow-hidden rounded-2xl bg-white
+                  className="w-full max-w-xl transform overflow-hidden rounded-xl bg-white
                 p-5 text-left align-middle shadow-xl transition-all lg:max-w-2xl"
                 >
                   <div className="grid grid-cols-2 gap-5">
