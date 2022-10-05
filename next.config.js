@@ -3,7 +3,12 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ["tailwindui.com", "i.ibb.co", "bonik-react.vercel.app"],
+    domains: [
+      "tailwindui.com",
+      "i.ibb.co",
+      "bonik-react.vercel.app",
+      "flone-react.pages.dev",
+    ],
   },
 };
 

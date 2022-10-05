@@ -1,36 +1,53 @@
+import Image from "next/image";
 import React from "react";
 
 const SingleProductImages = () => {
   return (
     <div>
-      <div className="h-[700px] w-full overflow-hidden">
-        <img
-          className="h-full w-full object-cover object-center"
-          src="https://flone-react.pages.dev/assets/img/product/fashion/7.jpg"
-          alt=""
-        />
-      </div>
-      <div className="mt-3 grid h-44 grid-cols-4 gap-2">
-        <img
-          className="h-full w-full cursor-pointer object-cover object-center"
-          src="https://flone-react.pages.dev/assets/img/product/fashion/7.jpg"
-          alt=""
-        />
-        <img
-          className="h-full w-full cursor-pointer object-cover object-center"
-          src="https://flone-react.pages.dev/assets/img/product/fashion/7.jpg"
-          alt=""
-        />
-        <img
-          className="h-full w-full cursor-pointer object-cover object-center"
-          src="https://flone-react.pages.dev/assets/img/product/fashion/7.jpg"
-          alt=""
-        />
-        <img
-          className="h-full w-full cursor-pointer object-cover object-center"
-          src="https://flone-react.pages.dev/assets/img/product/fashion/7.jpg"
-          alt=""
-        />
+      <Image
+        width="500"
+        height="550"
+        className="h-full w-full object-fill object-center"
+        src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+        alt=""
+      />
+      <div className="mt-3 flex space-x-8">
+        <div>
+          <Image
+            height="100"
+            width="100"
+            className="cursor-pointer object-fill object-center"
+            src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <Image
+            height="100"
+            width="100"
+            className="cursor-pointer object-fill object-center"
+            src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <Image
+            height="100"
+            width="100"
+            className="cursor-pointer object-fill object-center"
+            src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <Image
+            height="100"
+            width="100"
+            className="cursor-pointer object-fill object-center"
+            src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+            alt=""
+          />
+        </div>
       </div>
     </div>
   );
