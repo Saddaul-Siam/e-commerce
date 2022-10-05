@@ -29,7 +29,7 @@ const Navbar = () => {
   return (
     <div className="fixed top-0 left-0 z-50 w-full transform transition duration-500">
       <Announcement scroll={scroll} />
-      <div className="bg-white shadow-md lg:px-5 xl:px-0">
+      <div className={`bg-white lg:px-5 xl:px-0 ${scroll && "shadow-lg"}`}>
         <div className="xl:container">
           <div className="flex items-center justify-center py-4 lg:justify-between">
             <div className="hidden lg:block">
@@ -55,13 +55,15 @@ const Navbar = () => {
                 </Menu>
               </div>
             </div>
-            <div className="flex w-11/12 items-center rounded-full border px-6 py-2 hover:border-red-500 lg:w-1/2">
-              <FiSearch className="inline h-4 w-4 " />
+            <div className="mx-3 my-1 flex w-full items-center rounded border bg-slate-100 hover:border-red-500/90 lg:mx-0 lg:w-1/2">
               <input
                 type="text"
-                className="input w-11/12 pl-4 outline-none"
+                className="w-full bg-slate-100 pl-4 outline-none"
                 placeholder="Search and hit enter..."
               />
+              <div className="flex h-10 cursor-pointer items-center rounded-sm bg-red-500/90 px-5">
+                <FiSearch className="text-xl text-white" />
+              </div>
             </div>
             <div className="hidden space-x-5 lg:block">
               <span
