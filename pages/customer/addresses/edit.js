@@ -2,14 +2,14 @@ import React from "react";
 import {
   userAccounts,
   userDashboard,
-} from "../../../../data/dashboard.navigation";
+} from "../../../data/dashboard.navigation";
 import {
   BottomBar,
   Footer,
   Navbar,
-} from "../../../../components/sharedComponents";
-import { DashboardNavigation } from "../../../../components/mainComponents/Dashboard/Commone";
-import { DashboardCustomersAddressEdit } from "../../../../components/mainComponents/Dashboard/Customer";
+} from "../../../components/sharedComponents";
+import { DashboardNavigation } from "../../../components/mainComponents/Dashboard/Commone";
+import { DashboardCustomersAddressEdit } from "../../../components/mainComponents/Dashboard/Customer";
 
 const Index = () => {
   return (

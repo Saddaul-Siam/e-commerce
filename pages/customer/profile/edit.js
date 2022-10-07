@@ -3,13 +3,13 @@ import {
   BottomBar,
   Footer,
   Navbar,
-} from "../../../../components/sharedComponents";
-import { DashboardNavigation } from "../../../../components/mainComponents/Dashboard/Commone";
+} from "../../../components/sharedComponents";
+import { DashboardNavigation } from "../../../components/mainComponents/Dashboard/Commone";
 import {
   userAccounts,
   userDashboard,
-} from "../../../../data/dashboard.navigation";
-import { DashboardCustomersProfileEdit } from "../../../../components/mainComponents/Dashboard/Customer";
+} from "../../../data/dashboard.navigation";
+import { DashboardCustomersProfileEdit } from "../../../components/mainComponents/Dashboard/Customer";
 
 const Index = () => {
   return (

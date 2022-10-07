@@ -22,7 +22,7 @@ const BottomBar = () => {
             <BiCart className="h-6 w-6" /> <p>Cart</p>
           </li>
         </Link>
-        <Link href="/dashboard/customer/profile">
+        <Link href="customer/profile">
           <li className="flex w-full cursor-pointer flex-col items-center justify-center py-2 hover:text-red-500">
             <MdOutlineAccountCircle className="h-6 w-6" /> <p>Account</p>
           </li>

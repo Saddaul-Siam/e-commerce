@@ -6,7 +6,7 @@ const DashboardCustomerOrdersCart = ({ orders }) => {
   return (
     <>
       {orders.slice(0, 3).map(({ id, status, date, total }, i) => (
-        <Link key={i} href={`/dashboard/customer/orders/${id}`}>
+        <Link key={i} href={`/customer/orders/${id}`}>
           <ul className="my-3 grid cursor-pointer grid-cols-4 rounded-md bg-white py-5 px-5 text-base font-light text-gray-600 shadow">
             <li className="text-sm text-black sm:text-lg">{id}</li>
             <li>

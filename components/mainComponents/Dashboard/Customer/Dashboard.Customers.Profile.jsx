@@ -32,7 +32,7 @@ const DashboardCustomersProfile = () => {
           </button>
         </div>
         <div className="flex lg:justify-end">
-          <Link href="/dashboard/customer/profile/edit">
+          <Link href="/customer/profile/edit">
             <button className="bg-red-200 py-2 px-4 text-sm font-semibold text-red-500">
               Edit Profile
             </button>

@@ -21,19 +21,17 @@ const SearchingProducts = () => {
           </div>
           <div className="flex items-center space-x-3 text-sm text-gray-600 sm:space-x-4 sm:text-base">
             <p>Short by:</p>
-            <select name="" id="" className="h-10 border border-gray-300 ">
+            <select
+              name=""
+              id=""
+              className="h-10 rounded border border-gray-300 focus:border-red-500"
+            >
               <option value="" className="">
                 Best Match
               </option>
-              <option value="" className="">
-                Date
-              </option>
-              <option value="" className="">
-                Price low to high
-              </option>
-              <option value="" className="">
-                Price high to low
-              </option>
+              <option value="">Date</option>
+              <option value="">Price low to high</option>
+              <option value="">Price high to low</option>
             </select>
             <p
               className="cursor-pointer rounded-full p-2 text-lg hover:bg-slate-200 sm:text-xl lg:hidden"

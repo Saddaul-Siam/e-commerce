@@ -7,34 +7,34 @@ import { MdOutlineAccountCircle } from "react-icons/md";
 export const userDashboard = [
   {
     title: "Orders",
-    route: "/dashboard/customer/orders",
+    route: "/customer/orders",
     icon: <BsBag />,
   },
   {
     title: "Wishlists",
-    route: "/dashboard/customer/wishlists",
+    route: "/customer/wishlists",
     icon: <FiHeart />,
   },
   {
     title: "Support Tickets",
-    route: "/dashboard/customer/support-tickets",
+    route: "/customer/support-tickets",
     icon: <BiSupport />,
   },
 ];
 export const userAccounts = [
   {
     title: "Profile Info",
-    route: "/dashboard/customer/profile",
+    route: "/customer/profile",
     icon: <MdOutlineAccountCircle />,
   },
   {
     title: "Addresses",
-    route: "/dashboard/customer/addresses",
+    route: "/customer/addresses",
     icon: <HiOutlineLocationMarker />,
   },
   {
     title: "Payment Methods",
-    route: "/dashboard/customer/payment-methods",
+    route: "/customer/payment-methods",
     icon: <BsCreditCard2Back />,
   },
 ];

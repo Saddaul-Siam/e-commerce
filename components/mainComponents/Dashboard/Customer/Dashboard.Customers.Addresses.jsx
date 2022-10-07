@@ -26,7 +26,7 @@ const DashboardCustomersAddresses = () => {
           </button>
         </div>
         <div className="flex lg:justify-end">
-          <Link href="/dashboard/customer/addresses/new">
+          <Link href="/customer/addresses/new">
             <button className="bg-red-200 py-2 px-4 text-sm font-semibold text-red-500">
               Add New Addresses
             </button>
@@ -58,7 +58,7 @@ const DashboardCustomersAddresses = () => {
             Default Billing Address
           </p>
           <p className="col-span-4 flex justify-end text-xl lg:col-span-1">
-            <Link href="/dashboard/customer/addresses/edit">
+            <Link href="/customer/addresses/edit">
               <span className="inline-flex rounded-full p-3 hover:bg-slate-100">
                 <MdModeEdit />
               </span>
@@ -87,7 +87,7 @@ const DashboardCustomersAddresses = () => {
             Default Billing Address
           </p>
           <p className="col-span-4 flex justify-end text-xl lg:col-span-1">
-            <Link href="/dashboard/customer/addresses/edit">
+            <Link href="/customer/addresses/edit">
               <span className="inline-flex rounded-full p-3 hover:bg-slate-100">
                 <MdModeEdit />
               </span>
