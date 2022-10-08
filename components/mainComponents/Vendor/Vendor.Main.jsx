@@ -2,10 +2,10 @@ import { useState } from "react";
 import Image from "next/image";
 import { AiFillPhone, AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { MdLocationPin } from "react-icons/md";
-import { SearchingProductsSidebar } from "../../components/mainComponents/SearchingProducts";
 import VendorProfile from "./Vendor.Profile";
 import VendorAllProducts from "./Vendor.AllProducts";
 import VendorHomePage from "./Vendor.HomePage";
+import { SearchingProductsSidebar } from "../SearchingProducts";
 
 const VendorMain = () => {
   const [selectCategory, setSelectCategory] = useState("Home Page");
