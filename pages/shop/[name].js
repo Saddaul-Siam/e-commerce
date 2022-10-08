@@ -94,7 +94,57 @@ const Name = () => {
           </div>
           {/* Filter and products */}
           {selectCategory === "Home Page" && (
-            <h1>Developer is sleeping Home Page</h1>
+            <div className=" grid grid-cols-1 gap-2 sm:grid-cols-3">
+              <div className="relative h-80 w-full ">
+                <Image
+                  layout="fill"
+                  src="https://i.ibb.co/Hr7jLN8/07834833262c015742d3a375b2e14c45.jpg"
+                  alt=""
+                />
+              </div>
+              <div className="relative h-80 w-full">
+                <Image
+                  layout="fill"
+                  src="https://i.ibb.co/Lvzn5SH/3c2b7f2aa016e649c2ea069c057e41ea.jpg"
+                  alt=""
+                />
+              </div>
+              <div className="h-80 w-full space-y-2">
+                <div className="flex h-1/2 w-full gap-y-2 bg-white p-2">
+                  <div className="relative h-full w-1/2">
+                    <Image
+                      layout="fill"
+                      src="https://i.ibb.co/fdWzS0t/c10440515f77289e53b7e4148aae938a.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div className="relative h-full w-1/2">
+                    <h3 className="pt-2 text-2xl text-gray-600">
+                      Products Name
+                    </h3>
+                    <h4 className="absolute bottom-5 text-xl text-red-500/90">
+                      ৳500
+                    </h4>
+                  </div>
+                </div>
+                <div className="flex h-1/2 w-full gap-2">
+                  <div className="relative h-full w-1/2">
+                    <Image
+                      layout="fill"
+                      src="https://i.ibb.co/fdWzS0t/c10440515f77289e53b7e4148aae938a.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div className="relative h-full w-1/2">
+                    <Image
+                      layout="fill"
+                      src="https://i.ibb.co/7gjzb3y/946dd002559c3cabfcf38af60b308001.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
           )}
           {selectCategory === "All Products" && (
             <div className="grid grid-cols-5 gap-5 px-3 xl:px-0">
