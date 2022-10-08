@@ -103,22 +103,42 @@ const Name = () => {
             <div>
               {/* Top DesCounts */}
               <div className=" grid grid-cols-1 gap-2 sm:grid-cols-3">
-                <div className="relative h-80 w-full ">
+                <div className="relative h-80 w-full cursor-pointer">
                   <Image
                     layout="fill"
                     src="https://i.ibb.co/Hr7jLN8/07834833262c015742d3a375b2e14c45.jpg"
                     alt=""
                   />
+                  <div className="absolute inset-0 bg-gray-900/20 transition duration-200 ease-in-out hover:bg-gray-900/40" />
+                  <div className="absolute top-2 right-2 flex items-center justify-center rounded-full bg-red-500/90 p-5 px-7">
+                    <h2 className="text-2xl text-white">
+                      75% <br /> Off
+                    </h2>
+                  </div>
+                  <div className="absolute bottom-0 left-0 mb-1 flex gap-10 text-2xl text-white">
+                    <h2 className="ml-3">৳500</h2>
+                    <h2>Products Name</h2>
+                  </div>
                 </div>
-                <div className="relative h-80 w-full">
+                <div className="relative h-80 w-full cursor-pointer">
                   <Image
                     layout="fill"
                     src="https://i.ibb.co/Lvzn5SH/3c2b7f2aa016e649c2ea069c057e41ea.jpg"
                     alt=""
                   />
+                  <div className="absolute inset-0 bg-gray-900/20 transition duration-200 ease-in-out hover:bg-gray-900/40" />
+                  <div className="absolute top-2 right-2 flex items-center justify-center rounded-full bg-red-500/90 p-5 px-7">
+                    <h2 className="text-2xl text-white">
+                      75% <br /> Off
+                    </h2>
+                  </div>
+                  <div className="absolute bottom-0 left-0 mb-1 flex gap-10 text-2xl text-white">
+                    <h2 className="ml-3">৳500</h2>
+                    <h2>Products Name</h2>
+                  </div>
                 </div>
                 <div className="h-[312px] w-full space-y-2">
-                  <div className="flex h-1/2 w-full bg-white p-2">
+                  <div className="relative flex h-1/2 w-full cursor-pointer bg-white p-2">
                     <div className="relative h-full w-1/2">
                       <Image
                         layout="fill"
@@ -134,6 +154,7 @@ const Name = () => {
                         ৳500
                       </h4>
                     </div>
+                    <div className="absolute inset-0 transition duration-200 ease-in-out hover:bg-gray-900/40" />
                   </div>
                   <div className="flex h-1/2 w-full gap-2">
                     <div className="relative h-full w-1/2">
@@ -142,6 +163,7 @@ const Name = () => {
                         src="https://i.ibb.co/fdWzS0t/c10440515f77289e53b7e4148aae938a.jpg"
                         alt=""
                       />
+                      <div className="absolute inset-0 transition duration-200 ease-in-out hover:bg-gray-900/40" />
                     </div>
                     <div className="relative h-full w-1/2">
                       <Image
@@ -149,6 +171,7 @@ const Name = () => {
                         src="https://i.ibb.co/7gjzb3y/946dd002559c3cabfcf38af60b308001.jpg"
                         alt=""
                       />
+                      <div className="absolute inset-0 transition duration-200 ease-in-out hover:bg-gray-900/40" />
                     </div>
                   </div>
                 </div>
@@ -163,6 +186,7 @@ const Name = () => {
                   <SwiperProductCard products={products} />
                 </div>
               </div>
+              {/* Just for you products */}
               <div className="mt-10">
                 <h2 className="pb-5 text-2xl font-bold italic text-gray-700">
                   <AiFillThunderbolt className="inline text-red-600/90" /> Just
