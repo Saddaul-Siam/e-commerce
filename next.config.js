@@ -8,6 +8,8 @@ const nextConfig = {
       "i.ibb.co",
       "bonik-react.vercel.app",
       "flone-react.pages.dev",
+      "media.istockphoto.com",
+      "images.pexels.com",
     ],
   },
 };

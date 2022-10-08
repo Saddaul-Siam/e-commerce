@@ -9,11 +9,11 @@ import { useRouter } from "next/router";
 const NavbarMenu = ({ scroll }) => {
   const { route } = useRouter();
   const menu = [
-    { name: "Home", href: "" },
+    { name: "Home", href: "/" },
     { name: "Pages", href: "" },
-    { name: "User Account", href: "customer/profile" },
-    { name: "Vendor Account", href: "" },
-    { name: "Track My Order", href: "customer/orders" },
+    { name: "User Account", href: "/customer/profile" },
+    { name: "Vendor Account", href: "/shop/siam" },
+    { name: "Track My Order", href: "/customer/orders" },
   ];
   return (
     <div className="transform scroll-smooth transition duration-500 xl:container">
