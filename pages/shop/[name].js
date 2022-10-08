@@ -142,7 +142,7 @@ const Name = () => {
                     <div className="relative h-full w-1/2">
                       <Image
                         layout="fill"
-                        src="https://i.ibb.co/fdWzS0t/c10440515f77289e53b7e4148aae938a.jpg"
+                        src="https://i.ibb.co/1M0yMmh/e2339dad9c17f36ef2cbe6d623844ed5.jpg"
                         alt=""
                       />
                     </div>
@@ -164,6 +164,9 @@ const Name = () => {
                         alt=""
                       />
                       <div className="absolute inset-0 transition duration-200 ease-in-out hover:bg-gray-900/40" />
+                      <div className="absolute bottom-1 left-1 mb-0 text-2xl text-red-500/90">
+                        <h2>৳500</h2>
+                      </div>
                     </div>
                     <div className="relative h-full w-1/2">
                       <Image
@@ -172,6 +175,9 @@ const Name = () => {
                         alt=""
                       />
                       <div className="absolute inset-0 transition duration-200 ease-in-out hover:bg-gray-900/40" />
+                      <div className="absolute bottom-1 left-1 mb-0 text-2xl text-red-500">
+                        <h2>৳500</h2>
+                      </div>
                     </div>
                   </div>
                 </div>
