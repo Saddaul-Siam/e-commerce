@@ -11,10 +11,13 @@ import HeadlessUICategoriesDPD from "../HeadlessUIDropDown/HeadlessUICategoriesD
 import { BiCategory } from "react-icons/bi";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { Menu } from "@headlessui/react";
+import { useRouter } from "next/router";
 
 const Navbar = () => {
+  const router = useRouter();
   const [showProductCard, setShowProductCard] = useState(false);
   const [scroll, setScroll] = useState(null);
+  const [searchProduct, setSearchProduct] = useState("");
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -26,6 +29,9 @@ const Navbar = () => {
     });
   }, []);
 
+  const handleSearch = (e) => {
+    setSearchProduct(e.target.value);
+  };
   return (
     <div className="fixed top-0 left-0 z-50 w-full transform transition duration-500">
       <Announcement scroll={scroll} />
@@ -57,13 +63,18 @@ const Navbar = () => {
             </div>
             <div className="mx-3 my-1 flex w-full items-center rounded border bg-slate-100 hover:border-red-500/90 lg:mx-0 lg:w-1/2">
               <input
+                onChange={handleSearch}
                 type="text"
                 className="w-full bg-slate-100 pl-4 outline-none"
                 placeholder="Search and hit enter..."
               />
-              <div className="flex h-10 cursor-pointer items-center rounded-sm bg-red-500/90 px-5">
+              <button
+                disabled={searchProduct === "" ? true : false}
+                className={`flex h-10 cursor-pointer items-center rounded-sm bg-red-500/90 px-5 disabled:cursor-not-allowed`}
+                onClick={() => router.push(`/product/search/${searchProduct}`)}
+              >
                 <FiSearch className="text-xl text-white" />
-              </div>
+              </button>
             </div>
             <div className="hidden space-x-5 lg:block">
               <span
