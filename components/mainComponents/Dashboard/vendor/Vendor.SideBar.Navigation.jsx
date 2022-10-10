@@ -1,40 +1,37 @@
 import Image from "next/image";
 import React from "react";
-import { MdOutlineArrowForwardIos } from "react-icons/md";
-import { AiOutlineHome } from "react-icons/ai";
+import { MdDashboard, MdOutlineArrowForwardIos } from "react-icons/md";
+import { BsCardText, BsCart2, BsUpload } from "react-icons/bs";
+import { AiOutlineHome, AiOutlineSetting } from "react-icons/ai";
 import logo from "../../../../images/logo/logo.svg";
 
 const VendorSideBarNavigation = () => {
   const dashboard = [
     {
       title: "Dashboard",
-      icon: <AiOutlineHome />,
+      icon: <MdDashboard />,
       arrow: <MdOutlineArrowForwardIos />,
     },
   ];
   const pages = [
     {
-      title: "Dashboard",
-      icon: <AiOutlineHome />,
+      title: "Products",
+      icon: <BsCardText />,
       arrow: <MdOutlineArrowForwardIos />,
     },
     {
-      title: "Dashboard",
-      icon: <AiOutlineHome />,
+      title: "Add New Products",
+      icon: <BsUpload />,
       arrow: <MdOutlineArrowForwardIos />,
     },
     {
-      title: "Dashboard",
-      icon: <AiOutlineHome />,
-    },
-    {
-      title: "Dashboard",
-      icon: <AiOutlineHome />,
+      title: "Orders",
+      icon: <BsCart2 />,
       arrow: <MdOutlineArrowForwardIos />,
     },
     {
-      title: "Dashboard",
-      icon: <AiOutlineHome />,
+      title: "Accounts Settings",
+      icon: <AiOutlineSetting />,
       arrow: <MdOutlineArrowForwardIos />,
     },
   ];
