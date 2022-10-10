@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import { VendorMain } from "../../components/mainComponents/Dashboard/vendor";
 
 const dashboard = () => {
   return (
-    <div>dashboard</div>
-  )
-}
+    <>
+      <VendorMain />
+    </>
+  );
+};
 
-export default dashboard
+export default dashboard;

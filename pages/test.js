@@ -8,7 +8,7 @@ const Counter = () => {
 
   return (
     <div>
-      <div>
+      <div className="flex h-screen flex-col items-center justify-center">
         <button
           aria-label="Increment value"
           onClick={() => dispatch(increment())}

@@ -11,7 +11,7 @@ const HeadlessUIDropDown = ({ btnImg, btnText, dopData }) => {
   return (
     <Menu as="div" className="relative ">
       <Menu.Button className="inline-flex w-full items-center justify-center space-x-1 rounded-md py-2 text-sm font-medium">
-        <Image src={btnImg} alt="" height="15" width="20" className="rounded" />
+        <Image src={btnImg} alt="" height="20" width="20" className="rounded" />
         <p>{btnText}</p>
         <MdKeyboardArrowDown className="text-lg" />
       </Menu.Button>
