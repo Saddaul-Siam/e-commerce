@@ -14,7 +14,7 @@ const VendorNavbar = () => {
     <div className="flex h-16 items-center justify-between bg-blue-600">
       {/* Side bar Toggle */}
       <div>
-        <label className="swap-rotate swap h-16 w-14 text-white transition duration-300 ease-in-out hover:bg-blue-700">
+        <label className="swap swap-rotate h-16 w-14 text-white transition duration-300 ease-in-out hover:bg-blue-700">
           <input type="checkbox" />
           <svg
             className="swap-off fill-current"

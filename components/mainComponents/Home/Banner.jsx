@@ -54,7 +54,7 @@ const Banner = () => {
                 {categories.map(({ name, img }, index) => (
                   <li
                     key={index}
-                    className="flex cursor-pointer justify-between px-3 py-2 hover:bg-red-300"
+                    className="flex cursor-pointer justify-between px-3 py-2 hover:bg-slate-200"
                   >
                     <div className="flex space-x-3">
                       <Image src={img} alt="" width="20" height="20" />

@@ -1,11 +1,16 @@
 import React from "react";
-import { VendorMain } from "../../components/mainComponents/Dashboard/vendor";
+import {
+  VendorMainDashboard,
+  VendorDashboardLayout,
+} from "../../components/mainComponents/Dashboard/vendor";
 
 const dashboard = () => {
   return (
-    <>
-      <VendorMain />
-    </>
+    <div>
+      <VendorDashboardLayout>
+        <VendorMainDashboard />
+      </VendorDashboardLayout>
+    </div>
   );
 };
 

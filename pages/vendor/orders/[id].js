@@ -1,7 +1,17 @@
 import React from "react";
+import {
+  VendorDashboardLayout,
+  VendorOrderDetails,
+} from "../../../components/mainComponents/Dashboard/vendor";
 
 const id = () => {
-  return <div>id</div>;
+  return (
+    <div>
+      <VendorDashboardLayout>
+        <VendorOrderDetails />
+      </VendorDashboardLayout>
+    </div>
+  );
 };
 
 export default id;
