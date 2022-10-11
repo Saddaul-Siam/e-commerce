@@ -67,7 +67,7 @@ const VendorSideBarNavigation = () => {
     <div>
       {/* Logo */}
       <div className="flex h-16 w-full items-center bg-gray-600 pl-5">
-        <Image src={logo} alt="" className="cursor-pointer" />
+        <Image src={logo} alt="" className="cursor-pointer" height="40" />
       </div>
       {/* Navigation */}
       <div className="h-[93.4vh] w-full bg-white shadow-lg">

@@ -14,7 +14,7 @@ const VendorDashboardLayout = ({ children }) => {
         <div className="w-full">
           {/* Navbar */}
           <VendorNavbar />
-          <div className="p-5">{children}</div>
+          <div className="h-[93.4vh] overflow-y-scroll p-5">{children}</div>
         </div>
       </div>
     </div>

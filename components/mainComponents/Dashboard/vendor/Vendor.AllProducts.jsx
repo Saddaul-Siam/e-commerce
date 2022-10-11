@@ -6,7 +6,7 @@ import { products } from "../../../../data/products";
 const VendorAllProducts = () => {
   const router = useRouter();
   return (
-    <div>
+    <div className="container">
       <div className="w-full overflow-x-auto">
         <table className="table w-full">
           {/* <!-- head --> */}
