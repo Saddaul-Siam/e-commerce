@@ -41,7 +41,12 @@ const Navbar = () => {
             <div className="hidden lg:block">
               <div className="flex items-center justify-center">
                 <Link href="/">
-                  <Image src={logo} alt="" className="cursor-pointer" />
+                  <Image
+                    height="40"
+                    src={logo}
+                    alt=""
+                    className="cursor-pointer"
+                  />
                 </Link>
 
                 <Menu as="div" className="relative ">
