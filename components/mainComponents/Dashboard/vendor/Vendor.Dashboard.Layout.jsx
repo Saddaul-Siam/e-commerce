@@ -5,9 +5,9 @@ import VendorSideBarNavigation from "./Vendor.SideBar.Navigation";
 const VendorDashboardLayout = ({ children }) => {
   return (
     <div>
-      <div className="flex bg-[#EEF5F9]">
+      <div className="flex">
         {/* Side bar Navigation*/}
-        <div className="w-80">
+        <div className="hidden w-80 sm:block">
           <VendorSideBarNavigation />
         </div>
         {/* All Content */}
