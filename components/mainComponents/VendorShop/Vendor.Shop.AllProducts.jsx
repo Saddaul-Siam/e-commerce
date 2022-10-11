@@ -6,7 +6,7 @@ import { products } from "../../../data/products";
 import { ProductCard } from "../../sharedComponents";
 import { SearchingProductsSidebarMenu } from "../SearchingProducts";
 
-const VendorAllProducts = () => {
+const VendorShopAllProducts = () => {
   return (
     <div className="grid grid-cols-5 gap-5 px-3 xl:px-0">
       <div className="hidden sm:col-span-1 lg:block">
@@ -60,4 +60,4 @@ const VendorAllProducts = () => {
   );
 };
 
-export default VendorAllProducts;
+export default VendorShopAllProducts;

@@ -4,7 +4,7 @@ import { AiFillThunderbolt } from "react-icons/ai";
 import { products } from "../../../data/products";
 import { ProductCard, SwiperProductCard } from "../../sharedComponents";
 
-const VendorHomePage = () => {
+const VendorShopHomePage = () => {
   return (
     <div>
       {/* Top DesCounts */}
@@ -111,4 +111,4 @@ const VendorHomePage = () => {
   );
 };
 
-export default VendorHomePage;
+export default VendorShopHomePage;

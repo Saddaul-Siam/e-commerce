@@ -12,7 +12,7 @@ const NavbarMenu = ({ scroll }) => {
     { name: "Home", href: "/" },
     { name: "Pages", href: "" },
     { name: "User Account", href: "/customer/profile" },
-    { name: "Vendor Account", href: "/shop/siam" },
+    { name: "Vendor Account", href: "/vendor/dashboard" },
     { name: "Track My Order", href: "/customer/orders" },
   ];
   return (

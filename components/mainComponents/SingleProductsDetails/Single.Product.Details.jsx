@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import {
   AiFillStar,
@@ -85,6 +86,12 @@ const SingleProductDetails = () => {
         </span>
       </div>
       <p className="text-base">Categories : women fashion</p>
+      <p>
+        Sold By:{" "}
+        <Link href="/shop/siam">
+          <a>Siam Store</a>
+        </Link>
+      </p>
     </div>
   );
 };

@@ -2,9 +2,9 @@ import { useState } from "react";
 import Image from "next/image";
 import { AiFillPhone, AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { MdLocationPin } from "react-icons/md";
-import VendorProfile from "./Vendor.Profile";
-import VendorAllProducts from "./Vendor.AllProducts";
-import VendorHomePage from "./Vendor.HomePage";
+import VendorShopProfile from "./Vendor.Shop.Profile";
+import VendorShopAllProducts from "./Vendor.Shop.AllProducts";
+import VendorShopHomePage from "./Vendor.Shop.HomePage";
 import { SearchingProductsSidebar } from "../SearchingProducts";
 
 const VendorMain = () => {
@@ -90,9 +90,9 @@ const VendorMain = () => {
             </div>
           </div>
           {/* Filter and products */}
-          {selectCategory === "Home Page" && <VendorHomePage />}
-          {selectCategory === "All Products" && <VendorAllProducts />}
-          {selectCategory === "Profile" && <VendorProfile />}
+          {selectCategory === "Home Page" && <VendorShopHomePage />}
+          {selectCategory === "All Products" && <VendorShopAllProducts />}
+          {selectCategory === "Profile" && <VendorShopProfile />}
         </div>
       </div>
       {showSidebar && (

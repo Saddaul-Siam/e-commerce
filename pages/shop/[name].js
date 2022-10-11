@@ -1,11 +1,11 @@
 import { BottomBar, Footer, Navbar } from "../../components/sharedComponents";
-import { VendorMain } from "../../components/mainComponents/Vendor";
+import { VendorShopMain } from "../../components/mainComponents/VendorShop";
 
 const Name = () => {
   return (
     <>
       <Navbar />
-      <VendorMain />
+      <VendorShopMain />
       <BottomBar />
       <Footer />
     </>
