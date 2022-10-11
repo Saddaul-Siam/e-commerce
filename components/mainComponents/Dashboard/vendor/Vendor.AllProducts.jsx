@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useRouter } from "next/router";
 import React from "react";
 import { products } from "../../../../data/products";
@@ -24,7 +25,7 @@ const VendorAllProducts = () => {
             </tr>
           </thead>
           <tbody>
-            {/* <!-- row 1 --> */}
+            {/* <!-- row  --> */}
             {products.slice(0, 9).map((product, i) => (
               <tr
                 className="hover cursor-pointer"
@@ -39,8 +40,9 @@ const VendorAllProducts = () => {
                 <td>
                   <div className="flex items-center space-x-3">
                     <div className="avatar">
-                      <div className="mask mask-squircle h-12 w-12">
-                        <img
+                      <div className="mask mask-squircle relative h-12 w-12">
+                        <Image
+                          layout="fill"
                           src={product.imageSrc}
                           alt="Avatar Tailwind CSS Component"
                         />
@@ -69,7 +71,7 @@ const VendorAllProducts = () => {
               </tr>
             ))}
           </tbody>
-          {/* <!-- foot --> */}
+          {/* <!-- footer --> */}
           <tfoot className="bg-red-500 ">
             <tr>
               <th>
@@ -84,6 +86,7 @@ const VendorAllProducts = () => {
               <th></th>
               <th></th>
               <th>6 of 6 page (65 items)</th>
+              <th></th>
             </tr>
           </tfoot>
         </table>
