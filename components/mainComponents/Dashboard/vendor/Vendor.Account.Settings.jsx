@@ -6,8 +6,8 @@ const VendorAccountSettings = () => {
   return (
     <div className="mx-auto max-w-4xl">
       <div>
-        <h2 className="mb-5 text-2xl font-semibold text-gray-600">
-          Add New Product
+        <h2 className="my-5 text-2xl font-semibold text-gray-600">
+          Account Settings
         </h2>
       </div>
       <div className="rounded-md bg-white">
@@ -134,7 +134,7 @@ const VendorAccountSettings = () => {
           </div>
         </div>
         {/* save */}
-        <button className="btn border-none bg-red-500/90 hover:bg-red-600 m-5 ">
+        <button className="btn m-5 border-none bg-red-500/90 hover:bg-red-600 ">
           Save Changes
         </button>
       </div>

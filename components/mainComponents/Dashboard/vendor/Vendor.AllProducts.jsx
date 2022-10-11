@@ -7,16 +7,16 @@ const VendorAllProducts = () => {
   const router = useRouter();
   return (
     <div className="container">
+      <div>
+        <h2 className="my-5 text-2xl font-semibold text-gray-600">
+          All Products
+        </h2>
+      </div>
       <div className="w-full overflow-x-auto">
         <table className="table w-full">
           {/* <!-- head --> */}
           <thead>
             <tr className="hover:bg-stone-200">
-              <td>
-                <label>
-                  <input type="checkbox" className="checkbox" />
-                </label>
-              </td>
               <td>Product Name</td>
               <td>Details</td>
               <td>Color</td>
@@ -26,17 +26,12 @@ const VendorAllProducts = () => {
           </thead>
           <tbody>
             {/* <!-- row  --> */}
-            {products.slice(0, 9).map((product, i) => (
+            {products.slice(0, 8).map((product, i) => (
               <tr
                 className="hover"
                 key={i}
                 onClick={() => router.push(`/vendor/products/${product.id}`)}
               >
-                <td>
-                  <label>
-                    <input type="checkbox" className="checkbox" />
-                  </label>
-                </td>
                 <td>
                   <div className="flex items-center space-x-3">
                     <div className="avatar">
@@ -82,10 +77,9 @@ const VendorAllProducts = () => {
                   <button className="btn btn-sm">4</button>
                 </div>
               </th>
-              <th></th>
-              <th></th>
-              <th></th>
               <th>6 of 6 page (65 items)</th>
+              <th></th>
+              <th></th>
               <th></th>
             </tr>
           </tfoot>

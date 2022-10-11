@@ -7,6 +7,11 @@ const VendorAllOrders = () => {
   const router = useRouter();
   return (
     <div className="container">
+      <div>
+        <h2 className="my-5 text-2xl font-semibold text-gray-600">
+          All Orders
+        </h2>
+      </div>
       <div className="w-full overflow-x-auto">
         <table className="table w-full">
           {/* <!-- head --> */}
