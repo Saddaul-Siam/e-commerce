@@ -12,31 +12,31 @@ const VendorAllProducts = () => {
           {/* <!-- head --> */}
           <thead>
             <tr className="hover:bg-stone-200">
-              <th>
+              <td>
                 <label>
                   <input type="checkbox" className="checkbox" />
                 </label>
-              </th>
-              <th>Product Name</th>
-              <th>Details</th>
-              <th>Color</th>
-              <th>Price</th>
-              <th>Action</th>
+              </td>
+              <td>Product Name</td>
+              <td>Details</td>
+              <td>Color</td>
+              <td>Price</td>
+              <td>Action</td>
             </tr>
           </thead>
           <tbody>
             {/* <!-- row  --> */}
             {products.slice(0, 9).map((product, i) => (
               <tr
-                className="hover cursor-pointer"
+                className="hover"
                 key={i}
                 onClick={() => router.push(`/vendor/products/${product.id}`)}
               >
-                <th>
+                <td>
                   <label>
                     <input type="checkbox" className="checkbox" />
                   </label>
-                </th>
+                </td>
                 <td>
                   <div className="flex items-center space-x-3">
                     <div className="avatar">
