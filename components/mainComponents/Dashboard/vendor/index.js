@@ -8,3 +8,4 @@ export { default as VendorAccountSettings } from "./Vendor.Account.Settings";
 export { default as VendorAddProduct } from "./Vendor.Add.Product";
 export { default as VendorAllProducts } from "./Vendor.AllProducts";
 export { default as VendorProductDetails } from "./Vendor.Product.Details";
+export { default as VendorProductAddEditForm } from "./Vendor.Product.Add.Edit.Form";

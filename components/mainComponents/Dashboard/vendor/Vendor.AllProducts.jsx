@@ -2,6 +2,8 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import React from "react";
 import { products } from "../../../../data/products";
+import { TbEdit } from "react-icons/tb";
+import { MdDeleteOutline } from "react-icons/md";
 
 const VendorAllProducts = () => {
   const router = useRouter();
@@ -27,11 +29,7 @@ const VendorAllProducts = () => {
           <tbody>
             {/* <!-- row  --> */}
             {products.slice(0, 8).map((product, i) => (
-              <tr
-                className="hover"
-                key={i}
-                onClick={() => router.push(`/vendor/products/${product.id}`)}
-              >
+              <tr className="hover" key={i}>
                 <td>
                   <div className="flex items-center space-x-3">
                     <div className="avatar">
@@ -58,9 +56,17 @@ const VendorAllProducts = () => {
                 </td>
                 <td>{product.color}</td>
                 <td>{product.price}</td>
-                <th>
-                  <button className="btn btn-ghost btn-xs capitalize">
-                    Edit
+                <th className="text-xl">
+                  <button
+                    className="rounded-full p-3 capitalize hover:bg-slate-300"
+                    onClick={() =>
+                      router.push(`/vendor/products/${product.id}`)
+                    }
+                  >
+                    <TbEdit />
+                  </button>
+                  <button className="rounded-full p-3 capitalize hover:bg-slate-300">
+                    <MdDeleteOutline />
                   </button>
                 </th>
               </tr>

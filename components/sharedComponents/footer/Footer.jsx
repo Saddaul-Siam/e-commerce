@@ -18,7 +18,7 @@ const Footer = () => {
         <div className="grid grid-cols-12 gap-5 text-gray-400 sm:gap-0">
           <div className="col-span-12 space-y-3 sm:col-span-6 lg:col-span-4">
             <p>
-              <Image src={logo} alt="" />
+              <Image src={logo} alt="" height="35" />
             </p>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor

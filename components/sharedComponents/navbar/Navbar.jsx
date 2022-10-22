@@ -42,7 +42,7 @@ const Navbar = () => {
               <div className="flex items-center justify-center">
                 <Link href="/">
                   <Image
-                    height="40"
+                    height="35"
                     src={logo}
                     alt=""
                     className="cursor-pointer"
