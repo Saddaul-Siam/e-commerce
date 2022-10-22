@@ -2,8 +2,30 @@ import React from "react";
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebookF } from "react-icons/fa";
 import Link from "next/link";
+import { useForm } from "react-hook-form";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
 
 const Login = () => {
+  const { register, handleSubmit, reset } = useForm();
+
+  const onSubmit = (data) => {
+    axios
+      .post("http://localhost:5000/api/v1/user/login", {
+        data,
+      })
+      .then((res) => {
+        console.log(res);
+        if (res.data.status === "success") {
+          toast(res.data.message);
+        }
+        reset();
+      })
+      .catch((err) => {
+        toast(err.response.data.error);
+      });
+  };
   return (
     <section className="flex h-screen items-center justify-center bg-slate-100">
       <div className="w-[500px] rounded-lg bg-white px-16 py-10 shadow-sm">
@@ -12,35 +34,42 @@ const Login = () => {
             <h2 className="text-xl font-semibold">Welcome To E-commerce</h2>
             <p className="text-sm">Log in with email & password</p>
           </div>
-          <div className="space-y-3">
-            <div>
-              <label className="text-sm text-gray-600" htmlFor="email">
-                Email
-              </label>
-              <input
-                className="block h-10 w-full rounded-md border px-3"
-                placeholder="exmple@gmail.com"
-                type="email"
-                name="email"
-                id="email"
-              />
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <div className="space-y-3">
+              <div>
+                <label className="text-sm text-gray-600" htmlFor="email">
+                  Email
+                </label>
+                <input
+                  {...register("email", { required: true })}
+                  className="block h-10 w-full rounded-md border px-3"
+                  placeholder="exmple@gmail.com"
+                  type="email"
+                  name="email"
+                  id="email"
+                />
+              </div>
+              <div>
+                <label className="text-sm text-gray-600" htmlFor="password">
+                  Password
+                </label>
+                <input
+                  {...register("password", { required: true })}
+                  className="block h-10 w-full rounded-md border px-3"
+                  placeholder="******"
+                  type="password"
+                  name="password"
+                  id="password"
+                />
+              </div>
+              <button
+                type="submit"
+                className="h-10 w-full rounded-md bg-rose-500 text-base font-semibold text-white "
+              >
+                Login
+              </button>
             </div>
-            <div>
-              <label className="text-sm text-gray-600" htmlFor="password">
-                Password
-              </label>
-              <input
-                className="block h-10 w-full rounded-md border px-3"
-                placeholder="******"
-                type="password"
-                name="password"
-                id="password"
-              />
-            </div>
-            <button className="h-10 w-full rounded-md bg-rose-500 text-base font-semibold text-white ">
-              Login
-            </button>
-          </div>
+          </form>
         </div>
         <hr className="my-5 " />
         <div className="space-y-3">
@@ -68,6 +97,7 @@ const Login = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </section>
   );
 };
