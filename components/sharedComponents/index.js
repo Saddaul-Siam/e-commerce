@@ -6,3 +6,4 @@ export { default as SwiperCatagoriesCard } from "./Swiper/Swiper.CatagoriesCard"
 export { default as SwiperProductCard } from "./Swiper/Swiper.ProductCard";
 export { default as Footer } from "./footer/Footer";
 export { default as ProductCard } from "./productsCard/Products.Card";
+export { default as Loading } from "./loading/Loading";

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebookF } from "react-icons/fa";
 import Link from "next/link";
@@ -6,11 +6,14 @@ import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
+import { Loading } from "../../sharedComponents";
 
 const Login = () => {
   const { register, handleSubmit, reset } = useForm();
+  const [loading, setLoading] = useState(false);
 
   const onSubmit = (data) => {
+    setLoading(true);
     axios
       .post("http://localhost:5000/api/v1/user/login", {
         data,
@@ -18,14 +21,17 @@ const Login = () => {
       .then((res) => {
         console.log(res);
         if (res.data.status === "success") {
+          setLoading(false);
           toast(res.data.message);
         }
         reset();
       })
       .catch((err) => {
+        setLoading(false);
         toast(err.response.data.error);
       });
   };
+  toast();
   return (
     <section className="flex h-screen items-center justify-center bg-slate-100">
       <div className="w-[500px] rounded-lg bg-white px-16 py-10 shadow-sm">
@@ -97,6 +103,11 @@ const Login = () => {
           </div>
         </div>
       </div>
+      {loading && (
+        <div className="absolute flex h-full w-full items-center justify-center bg-gray-900/40">
+          <Loading />
+        </div>
+      )}
       <ToastContainer />
     </section>
   );

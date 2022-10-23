@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebookF } from "react-icons/fa";
 import Link from "next/link";
@@ -8,23 +8,28 @@ import { useRouter } from "next/router";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Loading } from "../../sharedComponents";
 
 const SignUp = () => {
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
   const { register, handleSubmit, reset } = useForm();
 
   const onSubmit = (data) => {
+    setLoading(true);
     axios
       .post("http://localhost:5000/api/v1/user/signup", {
         data,
       })
       .then((res) => {
         if (res.data.status === "success") {
+          setLoading(false);
           toast("check your email and verify account");
         }
         reset();
       })
       .catch((err) => {
+        setLoading(false);
         toast(err.response?.data?.error);
         toast(err.response?.data?.error?.errors?.password?.message);
         toast(err.response?.data?.error?.errors?.confirmPassword?.message);
@@ -144,6 +149,11 @@ const SignUp = () => {
           </div>
         </div>
       </div>
+      {loading && (
+        <div className="absolute flex h-full w-full items-center justify-center bg-gray-900/40">
+          <Loading />
+        </div>
+      )}
       <ToastContainer />
     </section>
   );
