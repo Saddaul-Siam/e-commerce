@@ -4,19 +4,19 @@ import storage from "redux-persist/lib/storage";
 
 import authReducer from "../reducers/auth.reducer";
 
-// const persistConfig = {
-//   key: "root",
-//   storage,
-// };
+const persistConfig = {
+  key: "root",
+  storage,
+};
 
 const rootReducer = combineReducers({
   user: authReducer,
 });
 
-// const persistedReducer = persistReducer(persistConfig, rootReducer);
+const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({
-  reducer: rootReducer,
+  reducer: persistedReducer,
 });
 
-// export const persistor = persistStore(store);
+export const persistor = persistStore(store);

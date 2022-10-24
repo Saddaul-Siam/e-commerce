@@ -1,13 +1,11 @@
+import axios from "axios";
+import Link from "next/link";
 import React, { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebookF } from "react-icons/fa";
-import Link from "next/link";
 import { useForm } from "react-hook-form";
-import axios from "axios";
 import { useRouter } from "next/router";
-
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 import { Loading } from "../../sharedComponents";
 
 const SignUp = () => {
@@ -33,6 +31,9 @@ const SignUp = () => {
         toast(err.response?.data?.error);
         toast(err.response?.data?.error?.errors?.password?.message);
         toast(err.response?.data?.error?.errors?.confirmPassword?.message);
+      })
+      .finally(() => {
+        router.push("/login");
       });
   };
   return (
@@ -154,7 +155,6 @@ const SignUp = () => {
           <Loading />
         </div>
       )}
-      <ToastContainer />
     </section>
   );
 };

@@ -1,16 +1,17 @@
+import axios from "axios";
+import Link from "next/link";
 import React, { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebookF } from "react-icons/fa";
-import Link from "next/link";
 import { useForm } from "react-hook-form";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import axios from "axios";
+import { toast } from "react-toastify";
 import { Loading } from "../../sharedComponents";
 import { useDispatch } from "react-redux";
 import { addUser } from "../../../redux/reducers/auth.reducer";
+import { useRouter } from "next/router";
 
 const Login = () => {
+  const router = useRouter();
   const dispatch = useDispatch();
   const { register, handleSubmit, reset } = useForm();
   const [loading, setLoading] = useState(false);
@@ -33,6 +34,9 @@ const Login = () => {
       .catch((err) => {
         setLoading(false);
         toast(err.response?.data?.error);
+      })
+      .finally(() => {
+        router.push("/");
       });
   };
   return (
@@ -111,7 +115,6 @@ const Login = () => {
           <Loading />
         </div>
       )}
-      <ToastContainer />
     </section>
   );
 };

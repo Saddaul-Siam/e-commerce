@@ -88,9 +88,11 @@ const Navbar = () => {
               >
                 <FiShoppingCart className="text- inline h-5 w-5" />
               </span>
-              <span className="rounded-full bg-slate-200 p-2">
-                <MdOutlineAccountCircle className="text-[#rgb(125, 135, 156)] inline h-6 w-6" />
-              </span>
+              <Link href="/login">
+                <span className="rounded-full bg-slate-200 p-2">
+                  <MdOutlineAccountCircle className="text-[#rgb(125, 135, 156)] inline h-6 w-6" />
+                </span>
+              </Link>
             </div>
           </div>
         </div>
