@@ -17,9 +17,9 @@ import { addUser } from "../redux/reducers/auth.reducer";
 
 const Home = () => {
   const dispatch = useDispatch();
-  const token = localStorage.getItem("token");
 
   useEffect(() => {
+    const token = localStorage.getItem("token");
     axios
       .get("http://localhost:5000/api/v1/user/me", {
         headers: {
@@ -30,7 +30,7 @@ const Home = () => {
         console.log(data.data);
         dispatch(addUser(data.data));
       });
-  }, [dispatch, token]);
+  }, [dispatch]);
 
   return (
     <div className="bg-white">
