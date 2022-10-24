@@ -1,3 +1,4 @@
+import axios from "axios";
 import Head from "next/head";
 import {
   Banner,
@@ -10,8 +11,27 @@ import {
   AllCatagories,
 } from "../components/mainComponents/Home";
 import { BottomBar, Footer, Navbar } from "../components/sharedComponents";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { addUser } from "../redux/reducers/auth.reducer";
 
-export default function Home() {
+const Home = () => {
+  const dispatch = useDispatch();
+  const token = localStorage.getItem("token");
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/api/v1/user/me", {
+        headers: {
+          Authorization: `bearer ${token}`,
+        },
+      })
+      .then(({ data }) => {
+        console.log(data.data);
+        dispatch(addUser(data.data));
+      });
+  }, [dispatch, token]);
+
   return (
     <div className="bg-white">
       <Head>
@@ -35,4 +55,6 @@ export default function Home() {
       </div>
     </div>
   );
-}
+};
+
+export default Home;

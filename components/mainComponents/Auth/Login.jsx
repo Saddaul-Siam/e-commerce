@@ -32,7 +32,7 @@ const Login = () => {
       })
       .catch((err) => {
         setLoading(false);
-        toast(err.response.data.error);
+        toast(err.response?.data?.error);
       });
   };
   return (
