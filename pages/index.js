@@ -27,7 +27,6 @@ const Home = () => {
         },
       })
       .then(({ data }) => {
-        console.log(data.data);
         dispatch(addUser(data.data));
       });
   }, [dispatch]);
