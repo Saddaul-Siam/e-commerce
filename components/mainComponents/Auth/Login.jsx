@@ -7,8 +7,11 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import { Loading } from "../../sharedComponents";
+import { useDispatch } from "react-redux";
+import { addUser } from "../../../redux/reducers/auth.reducer";
 
 const Login = () => {
+  const dispatch = useDispatch();
   const { register, handleSubmit, reset } = useForm();
   const [loading, setLoading] = useState(false);
 
@@ -19,10 +22,11 @@ const Login = () => {
         data,
       })
       .then((res) => {
-        console.log(res);
         if (res.data.status === "success") {
           setLoading(false);
           toast(res.data.message);
+          dispatch(addUser(res.data.data.user));
+          localStorage.setItem("token", res.data.data.token);
         }
         reset();
       })
@@ -31,7 +35,6 @@ const Login = () => {
         toast(err.response.data.error);
       });
   };
-  toast();
   return (
     <section className="flex h-screen items-center justify-center bg-slate-100">
       <div className="w-[500px] rounded-lg bg-white px-16 py-10 shadow-sm">
