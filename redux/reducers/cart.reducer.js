@@ -33,6 +33,8 @@ export const cartReducer = createSlice({
       );
       if (state.cartItems[itemIndex].cartQuantity > 1) {
         state.cartItems[itemIndex].cartQuantity -= 1;
+      } else {
+        state.cartItems.pop(itemIndex);
       }
     },
     removeFromCart: (state, { payload }) => {
