@@ -104,7 +104,7 @@ const ProductsCard = ({ product }) => {
           </div>
         </div>
       </div>
-      <ProductsModal isOpen={isOpen} setIsOpen={setIsOpen} />
+      <ProductsModal isOpen={isOpen} setIsOpen={setIsOpen} product={product} />
     </>
   );
 };

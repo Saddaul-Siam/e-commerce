@@ -12,12 +12,14 @@ import { BiCategory } from "react-icons/bi";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { Menu } from "@headlessui/react";
 import { useRouter } from "next/router";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const router = useRouter();
   const [showProductCard, setShowProductCard] = useState(false);
   const [scroll, setScroll] = useState(null);
   const [searchProduct, setSearchProduct] = useState("");
+  const { cartItems } = useSelector((state) => state.cart);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -83,10 +85,15 @@ const Navbar = () => {
             </div>
             <div className="hidden space-x-5 lg:block">
               <span
-                className="cursor-pointer rounded-full bg-slate-200 p-2"
+                className="relative cursor-pointer rounded-full bg-slate-200 p-2"
                 onClick={() => setShowProductCard(true)}
               >
                 <FiShoppingCart className="text- inline h-5 w-5" />
+                {cartItems.length > 0 && (
+                  <span className="absolute -top-2 -right-3 rounded-full bg-sky-300 px-2 text-sm">
+                    {cartItems.length}
+                  </span>
+                )}
               </span>
               <Link href="/login">
                 <span className="rounded-full bg-slate-200 p-2">

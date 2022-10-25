@@ -8,6 +8,8 @@ export const products = [
     imageAlt: "Front of men's Basic Tee in black.",
     price: "35",
     color: "Black",
+    rating: "4.2",
+    status: "in-stock",
   },
   {
     id: 2,
@@ -18,6 +20,8 @@ export const products = [
     imageAlt: "Front of men's Basic Tee in black.",
     price: "35",
     color: "Black",
+    rating: "4.2",
+    status: "in-stock",
   },
   {
     id: 3,
@@ -28,6 +32,8 @@ export const products = [
     imageAlt: "Front of men's Basic Tee in black.",
     price: "35",
     color: "Black",
+    rating: "4.2",
+    status: "in-stock",
   },
   {
     id: 4,
@@ -38,6 +44,8 @@ export const products = [
     imageAlt: "Front of men's Basic Tee in black.",
     price: "35",
     color: "Black",
+    rating: "4.2",
+    status: "in-stock",
   },
   {
     id: 5,
@@ -48,6 +56,8 @@ export const products = [
     imageAlt: "Front of men's Basic Tee in black.",
     price: "35",
     color: "Black",
+    rating: "4.2",
+    status: "in-stock",
   },
   {
     id: 6,
@@ -58,6 +68,8 @@ export const products = [
     imageAlt: "Front of men's Basic Tee in black.",
     price: "35",
     color: "Black",
+    rating: "4.2",
+    status: "in-stock",
   },
   {
     id: 7,
@@ -68,6 +80,8 @@ export const products = [
     imageAlt: "Front of men's Basic Tee in black.",
     price: "35",
     color: "Black",
+    rating: "4.2",
+    status: "in-stock",
   },
   {
     id: 8,
@@ -78,6 +92,8 @@ export const products = [
     imageAlt: "Front of men's Basic Tee in black.",
     price: "35",
     color: "Black",
+    rating: "4.2",
+    status: "in-stock",
   },
   {
     id: 9,
@@ -88,6 +104,8 @@ export const products = [
     imageAlt: "Front of men's Basic Tee in black.",
     price: "35",
     color: "Black",
+    rating: "4.2",
+    status: "in-stock",
   },
   {
     id: 10,
@@ -98,6 +116,8 @@ export const products = [
     imageAlt: "Front of men's Basic Tee in black.",
     price: "35",
     color: "Black",
+    rating: "4.2",
+    status: "in-stock",
   },
   {
     id: 11,
@@ -108,6 +128,8 @@ export const products = [
     imageAlt: "Front of men's Basic Tee in black.",
     price: "35",
     color: "Black",
+    rating: "4.2",
+    status: "in-stock",
   },
   {
     id: 12,
@@ -118,6 +140,8 @@ export const products = [
     imageAlt: "Front of men's Basic Tee in black.",
     price: "35",
     color: "Black",
+    rating: "4.2",
+    status: "in-stock",
   },
   {
     id: 13,
@@ -128,6 +152,8 @@ export const products = [
     imageAlt: "Front of men's Basic Tee in black.",
     price: "35",
     color: "Black",
+    rating: "4.2",
+    status: "in-stock",
   },
   {
     id: 14,
@@ -138,6 +164,8 @@ export const products = [
     imageAlt: "Front of men's Basic Tee in black.",
     price: "35",
     color: "Black",
+    rating: "4.2",
+    status: "in-stock",
   },
   {
     id: 15,
@@ -148,6 +176,8 @@ export const products = [
     imageAlt: "Front of men's Basic Tee in black.",
     price: "35",
     color: "Black",
+    rating: "4.2",
+    status: "in-stock",
   },
   {
     id: 16,
@@ -158,6 +188,8 @@ export const products = [
     imageAlt: "Front of men's Basic Tee in black.",
     price: "35",
     color: "Black",
+    rating: "4.2",
+    status: "in-stock",
   },
   {
     id: 17,
@@ -168,6 +200,8 @@ export const products = [
     imageAlt: "Front of men's Basic Tee in black.",
     price: "35",
     color: "Black",
+    rating: "4.2",
+    status: "in-stock",
   },
   {
     id: 18,
@@ -178,6 +212,8 @@ export const products = [
     imageAlt: "Front of men's Basic Tee in black.",
     price: "35",
     color: "Black",
+    rating: "4.2",
+    status: "in-stock",
   },
   {
     id: 19,
@@ -188,6 +224,8 @@ export const products = [
     imageAlt: "Front of men's Basic Tee in black.",
     price: "35",
     color: "Black",
+    rating: "4.2",
+    status: "in-stock",
   },
   {
     id: 20,
@@ -198,6 +236,8 @@ export const products = [
     imageAlt: "Front of men's Basic Tee in black.",
     price: "35",
     color: "Black",
+    rating: "4.2",
+    status: "in-stock",
   },
 ];
 

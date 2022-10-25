@@ -1,9 +1,13 @@
-import { Dialog, Transition } from "@headlessui/react";
 import Image from "next/image";
 import { Fragment } from "react";
+import { useDispatch } from "react-redux";
+import { Dialog, Transition } from "@headlessui/react";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
+import { addToCart } from "../../../redux/reducers/cart.reducer";
+import Link from "next/link";
 
-export default function ProductsModal({ setIsOpen, isOpen }) {
+const ProductsModal = ({ setIsOpen, isOpen, product }) => {
+  const dispatch = useDispatch();
   return (
     <>
       <Transition appear show={isOpen} as={Fragment}>
@@ -44,7 +48,7 @@ export default function ProductsModal({ setIsOpen, isOpen }) {
                         className="rounded-md"
                         height="350"
                         width="250"
-                        src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                        src={product.imageSrc}
                         alt=""
                       />
                       {/* images */}
@@ -75,44 +79,42 @@ export default function ProductsModal({ setIsOpen, isOpen }) {
                     </div>
                     <div className="space-y-1.5 text-sm text-gray-500 sm:space-y-3">
                       <h2 className="pb-3 text-xl font-bold text-black sm:text-3xl">
-                        Say Ban Ocean
+                        {product.name}
                       </h2>
                       <p className="">
                         Brand:{" "}
                         <span className="font-semibold text-gray-700">
-                          Ziaomi
+                          {product.brand}
                         </span>
                       </p>
                       <p className="">
-                        Rated:🥰🥰🥰🥰🥰
+                        Rated:{product.rating}
                         <span className="font-semibold text-gray-700">
                           {" "}
-                          (50)
+                          ({product.rating?.length})
                         </span>
                       </p>
-                      <p className="">Stock Available</p>
+                      <p className="">Status: {product.status}</p>
                       <p className="pt-3 text-2xl font-bold text-red-500/90 sm:pt-5 sm:text-3xl">
-                        $250.00
+                        ${product.price}
                       </p>
-                      <div className="flex flex-col space-y-4 py-3 sm:flex-row sm:space-x-5 sm:py-5">
-                        <div className="flex items-center space-x-2 text-base">
-                          <span className="cursor-pointer rounded-md border border-red-500 p-1 text-red-500 hover:bg-red-500 hover:text-white">
-                            <AiOutlineMinus />
-                          </span>
-                          <span>1</span>
-                          <span className="cursor-pointer rounded-md border border-red-500 p-1 text-red-500 hover:bg-red-500 hover:text-white">
-                            <AiOutlinePlus />
-                          </span>
-                        </div>
-                        <button className="ease-in-outs rounded-md bg-red-500/90 px-10 py-2 text-white transition duration-300 hover:bg-red-600">
+                      <div className="py-5">
+                        <button
+                          onClick={() => dispatch(addToCart(product))}
+                          className="ease-in-outs rounded-md bg-red-500/90 px-10 py-2 text-white transition duration-300 hover:bg-red-600"
+                        >
                           Add to cart
                         </button>
                       </div>
                       <p className="">
-                        Sold By:{" "}
-                        <span className="font-semibold text-gray-700">
-                          Mobile Store
-                        </span>
+                        Sold By:
+                        <Link href="/shop/siam">
+                          <a>
+                            <span className="font-semibold text-gray-700">
+                              Siam Store
+                            </span>
+                          </a>
+                        </Link>
                       </p>
                     </div>
                   </div>
@@ -124,4 +126,5 @@ export default function ProductsModal({ setIsOpen, isOpen }) {
       </Transition>
     </>
   );
-}
+};
+export default ProductsModal;
