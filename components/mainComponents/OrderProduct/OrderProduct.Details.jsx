@@ -1,9 +1,11 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 import { Footer, Navbar } from "../../sharedComponents";
 import OrderSummaryCart from "./OrderSummaryCart";
 
 const OrderProductDetails = () => {
+  const router = useRouter();
   return (
     <div className="bg-slate-200">
       <Navbar />
@@ -103,10 +105,16 @@ const OrderProductDetails = () => {
               </div>
             </div>
             <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2">
-              <button className="w-full transform border border-red-500/90 py-2 text-base font-semibold text-red-500/90 transition duration-100 ease-in-out hover:bg-red-500/90 hover:text-white">
+              <button
+                onClick={() => router.push("/cart")}
+                className="w-full transform border border-red-500/90 py-2 text-base font-semibold text-red-500/90 transition duration-100 ease-in-out hover:bg-red-500/90 hover:text-white"
+              >
                 Back to Cart
               </button>
-              <button className="w-full bg-red-500/90 py-2 text-base font-semibold text-white">
+              <button
+                onClick={() => router.push("/payment")}
+                className="w-full bg-red-500/90 py-2 text-base font-semibold text-white"
+              >
                 Proceed to Payment
               </button>
             </div>

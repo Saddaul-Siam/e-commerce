@@ -31,7 +31,10 @@ const OrderSummaryCart = () => {
       </div>
       {router.asPath === "/cart" && (
         <div>
-          <button className="w-full bg-red-500/90 py-2 text-sm text-white transition duration-100 ease-in-out hover:bg-red-600">
+          <button
+            onClick={() => router.push("/details")}
+            className="w-full bg-red-500/90 py-2 text-sm text-white transition duration-100 ease-in-out hover:bg-red-600"
+          >
             PROCEED TO CHECKOUT
           </button>
         </div>

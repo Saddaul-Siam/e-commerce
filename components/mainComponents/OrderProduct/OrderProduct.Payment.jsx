@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { FcOk } from "react-icons/fc";
 import { Footer, Navbar } from "../../sharedComponents";
@@ -12,6 +13,7 @@ import SelectPaymentOption from "./OrderProductSelectPaymentOption";
 import OrderSummaryCart from "./OrderSummaryCart";
 
 const OrderProductPayment = () => {
+  const router = useRouter();
   const [payWith, setPayWith] = useState("bkash");
   return (
     <div className="bg-slate-200">
@@ -83,11 +85,14 @@ const OrderProductPayment = () => {
             </div>
 
             <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2">
-              <button className="w-full transform border border-red-500/90 py-2 text-base font-semibold text-red-500/90 transition duration-100 ease-in-out hover:bg-red-500/90 hover:text-white">
-                Back to Cart
+              <button
+                onClick={() => router.push("/details")}
+                className="w-full transform border border-red-500/90 py-2 text-base font-semibold text-red-500/90 transition duration-100 ease-in-out hover:bg-red-500/90 hover:text-white"
+              >
+                Back to Details
               </button>
               <button className="w-full bg-red-500/90 py-2 text-base font-semibold text-white">
-                Proceed to Payment
+                Pay Now
               </button>
             </div>
           </div>
