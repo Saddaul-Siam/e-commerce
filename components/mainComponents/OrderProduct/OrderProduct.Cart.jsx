@@ -1,10 +1,18 @@
 import Link from "next/link";
 import React from "react";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  decrementQuantity,
+  incrementQuantity,
+  removeFromCart,
+} from "../../../redux/reducers/cart.reducer";
 import { Footer, Navbar } from "../../sharedComponents";
 import OrderSummaryCart from "./OrderSummaryCart";
 
 const OrderProductCart = () => {
+  const dispatch = useDispatch();
+  const cartItems = useSelector((state) => state.cart.cartItems);
   return (
     <div className="bg-slate-200">
       <div className="container mt-32 lg:mt-[10.9rem]">
@@ -39,98 +47,53 @@ const OrderProductCart = () => {
         </div>
         <div className="mb-10	grid grid-cols-3 gap-5">
           <div className="col-span-3 space-y-5 lg:col-span-2">
-            <div className="flex w-full rounded-md bg-white">
-              <div className="h-36 w-40">
-                <img
-                  className="h-full w-full object-cover object-fill"
-                  src="https://bonik-react.vercel.app/assets/images/products/Automotive/1.Ford2019.png"
-                  alt=""
-                />
-              </div>
-              <div className="flex w-full flex-col justify-between p-6">
-                <div className="flex w-full justify-between text-lg text-gray-600">
-                  <h4>Product Name</h4>
-                  <p>X</p>
+            {cartItems.map((item, index) => (
+              <div key={index} className="flex w-full rounded-md bg-white">
+                <div className="h-36 w-40">
+                  <img
+                    className="h-full w-full object-cover object-fill"
+                    src={item.imageSrc}
+                    alt=""
+                  />
                 </div>
-                <div className="flex w-full justify-between">
-                  <p className="text-sm text-gray-500">
-                    $250.00 x 1
-                    <span className="text-base text-red-500/90"> $250.00</span>
-                  </p>
-                  <div className="flex justify-center space-x-2 text-base">
-                    <span className="cursor-pointer rounded-md border border-red-500/90 p-1 text-red-500/90 hover:bg-red-500/90 hover:text-white">
-                      <AiOutlineMinus />
-                    </span>
-                    <p>1</p>
-                    <span className="cursor-pointer rounded-md border border-red-500/90 p-1 text-red-500/90 hover:bg-red-500/90 hover:text-white">
-                      <AiOutlinePlus />
-                    </span>
+                <div className="flex w-full flex-col justify-between p-6">
+                  <div className="flex w-full justify-between text-lg text-gray-600">
+                    <h4>{item.name}</h4>
+                    <p
+                      onClick={() => dispatch(removeFromCart(item.id))}
+                      className="cursor-pointer"
+                    >
+                      X
+                    </p>
+                  </div>
+                  <div className="flex w-full justify-between">
+                    <p className="text-sm text-gray-500">
+                      ${item.price} x 1
+                      <span className="text-base text-red-500/90">
+                        {" "}
+                        ${item.price * item.cartQuantity}
+                      </span>
+                    </p>
+                    <div className="flex justify-center space-x-2 text-base">
+                      <span
+                        onClick={() => dispatch(decrementQuantity(item.id))}
+                        className="cursor-pointer rounded-md border border-red-500/90 p-1 text-red-500/90 hover:bg-red-500/90 hover:text-white"
+                      >
+                        <AiOutlineMinus />
+                      </span>
+                      <p>{item.cartQuantity}</p>
+                      <span
+                        onClick={() => dispatch(incrementQuantity(item.id))}
+                        className="cursor-pointer rounded-md border border-red-500/90 p-1 text-red-500/90 hover:bg-red-500/90 hover:text-white"
+                      >
+                        <AiOutlinePlus />
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="flex w-full rounded-md bg-white">
-              <div className="h-36 w-40">
-                <img
-                  className="h-full w-full object-cover object-fill"
-                  src="https://bonik-react.vercel.app/assets/images/products/Automotive/1.Ford2019.png"
-                  alt=""
-                />
-              </div>
-              <div className="flex w-full flex-col justify-between p-6">
-                <div className="flex w-full justify-between text-lg text-gray-600">
-                  <h4>Product Name</h4>
-                  <p>X</p>
-                </div>
-                <div className="flex w-full justify-between">
-                  <p className="text-sm text-gray-500">
-                    $250.00 x 1
-                    <span className="text-base text-red-500/90"> $250.00</span>
-                  </p>
-                  <div className="flex justify-center space-x-2 text-base">
-                    <span className="cursor-pointer rounded-md border border-red-500/90 p-1 text-red-500/90 hover:bg-red-500/90 hover:text-white">
-                      <AiOutlineMinus />
-                    </span>
-                    <p>1</p>
-                    <span className="cursor-pointer rounded-md border border-red-500/90 p-1 text-red-500/90 hover:bg-red-500/90 hover:text-white">
-                      <AiOutlinePlus />
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="flex w-full rounded-md bg-white">
-              <div className="h-36 w-40">
-                <img
-                  className="h-full w-full object-cover object-fill"
-                  src="https://bonik-react.vercel.app/assets/images/products/Automotive/1.Ford2019.png"
-                  alt=""
-                />
-              </div>
-              <div className="flex w-full flex-col justify-between p-6">
-                <div className="flex w-full justify-between text-lg text-gray-600">
-                  <h4>Product Name</h4>
-                  <p>X</p>
-                </div>
-                <div className="flex w-full justify-between">
-                  <p className="text-sm text-gray-500">
-                    $250.00 x 1
-                    <span className="text-base text-red-500/90"> $250.00</span>
-                  </p>
-                  <div className="flex justify-center space-x-2 text-base">
-                    <span className="cursor-pointer rounded-md border border-red-500/90 p-1 text-red-500/90 hover:bg-red-500/90 hover:text-white">
-                      <AiOutlineMinus />
-                    </span>
-                    <p>1</p>
-                    <span className="cursor-pointer rounded-md border border-red-500/90 p-1 text-red-500/90 hover:bg-red-500/90 hover:text-white">
-                      <AiOutlinePlus />
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
-
           <div className="col-span-3 lg:col-span-1">
             <OrderSummaryCart />
           </div>

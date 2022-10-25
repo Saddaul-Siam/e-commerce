@@ -1,5 +1,3 @@
-import Link from "next/link";
-import React, { useState } from "react";
 import {
   AiFillEye,
   AiFillStar,
@@ -8,14 +6,15 @@ import {
   AiOutlinePlus,
   AiOutlineStar,
 } from "react-icons/ai";
-import { BsCart2 } from "react-icons/bs";
-import { useDispatch, useSelector } from "react-redux";
 import {
   addToCart,
   decrementQuantity,
-  removeFromCart,
 } from "../../../redux/reducers/cart.reducer";
+import Link from "next/link";
+import React, { useState } from "react";
+import { BsCart2 } from "react-icons/bs";
 import ProductsModal from "../modal/Products.Modal";
+import { useDispatch, useSelector } from "react-redux";
 
 const ProductsCard = ({ product }) => {
   const dispatch = useDispatch();
@@ -55,9 +54,9 @@ const ProductsCard = ({ product }) => {
                 <AiOutlineStar />
               </p>
               <div className="flex space-x-2 text-base font-medium">
-                <p className="text-red-600/90">{product.price}</p>
+                <p className="text-red-600/90">${product.price}</p>
                 {/* Discount price */}
-                <p className="text-gray-600 line-through">{product.price}</p>
+                <p className="text-gray-600 line-through">${product.price}</p>
               </div>
             </div>
             {/* Add to Cart */}
