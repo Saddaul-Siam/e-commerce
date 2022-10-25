@@ -9,10 +9,20 @@ import {
   AiOutlineStar,
 } from "react-icons/ai";
 import { BsCart2 } from "react-icons/bs";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  addToCart,
+  decrementQuantity,
+  removeFromCart,
+} from "../../../redux/reducers/cart.reducer";
 import ProductsModal from "../modal/Products.Modal";
 
 const ProductsCard = ({ product }) => {
+  const dispatch = useDispatch();
   let [isOpen, setIsOpen] = useState(false);
+  const { cartItems } = useSelector((state) => state.cart);
+  const cartItem = cartItems.find((cartItem) => cartItem.id === product.id);
+
   return (
     <>
       <div className="relative">
@@ -52,11 +62,23 @@ const ProductsCard = ({ product }) => {
             </div>
             {/* Add to Cart */}
             <div className="z-10 flex flex-col items-center justify-center text-base ">
-              <span className="cursor-pointer rounded-md border border-red-500 p-1 text-red-500 hover:bg-red-500 hover:text-white">
-                <AiOutlineMinus />
-              </span>
-              1
-              <span className="cursor-pointer rounded-md border border-red-500 p-1 text-red-500 hover:bg-red-500 hover:text-white">
+              {cartItem?.cartQuantity >= 1 ? (
+                <>
+                  <span
+                    onClick={() => dispatch(decrementQuantity(product.id))}
+                    className="cursor-pointer rounded-md border border-red-500 p-1 text-red-500 hover:bg-red-500 hover:text-white"
+                  >
+                    <AiOutlineMinus />
+                  </span>
+                  <span>{cartItem.cartQuantity}</span>
+                </>
+              ) : (
+                ""
+              )}
+              <span
+                onClick={() => dispatch(addToCart(product))}
+                className="cursor-pointer rounded-md border border-red-500 p-1 text-red-500 hover:bg-red-500 hover:text-white"
+              >
                 <AiOutlinePlus />
               </span>
             </div>

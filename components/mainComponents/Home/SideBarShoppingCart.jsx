@@ -1,10 +1,12 @@
 import { useRouter } from "next/router";
 import React from "react";
 import { AiOutlineShopping } from "react-icons/ai";
+import { useSelector } from "react-redux";
 import SideBarShoppingCartItem from "./SideBarShoppingCartItem";
 
 const SideBarShoppingCart = ({ setShowProductCard }) => {
   const router = useRouter();
+  const cart = useSelector((state) => state.cart);
   return (
     <section className="fixed inset-0 flex h-screen w-screen justify-between ">
       <div
@@ -18,7 +20,7 @@ const SideBarShoppingCart = ({ setShowProductCard }) => {
               <div className="flex items-center justify-between py-5 px-3">
                 <div className="flex space-x-3 text-xl">
                   <AiOutlineShopping className="text-2xl" />
-                  <p>3 item</p>
+                  <p>{cart.cartItems.length} item</p>
                 </div>
                 <p
                   className="cursor-pointer rounded-full bg-slate-200 px-2.5 py-1 hover:bg-slate-400 hover:text-white"
@@ -28,14 +30,9 @@ const SideBarShoppingCart = ({ setShowProductCard }) => {
                 </p>
               </div>
               <hr />
-              <SideBarShoppingCartItem />
-              <SideBarShoppingCartItem />
-              <SideBarShoppingCartItem />
-              <SideBarShoppingCartItem />
-              <SideBarShoppingCartItem />
-              <SideBarShoppingCartItem />
-              <SideBarShoppingCartItem />
-              <SideBarShoppingCartItem />
+              {cart?.cartItems.map((item) => (
+                <SideBarShoppingCartItem item={item} key={item.id} />
+              ))}
             </div>
           </div>
           <div className="my-3 ml-3 mr-7 space-y-3">
@@ -43,7 +40,7 @@ const SideBarShoppingCart = ({ setShowProductCard }) => {
               className="w-full rounded-md bg-red-600 p-2 text-sm font-semibold text-white"
               onClick={() => router.push("/details")}
             >
-              Checkout Now ($122.00)
+              Checkout Now ( ${cart.cartTotalAmount} )
             </button>
             <button
               className="w-full rounded-md border border-red-600 p-2 text-sm font-semibold text-red-600"
