@@ -78,6 +78,22 @@ const create = () => {
               <div>
                 <label
                   className="text-sm font-semibold text-gray-500/80"
+                  htmlFor="phone"
+                >
+                  Phone Number
+                </label>
+                <input
+                  className="h-10 w-full rounded border px-2 outline-1 focus:outline-red-500/90"
+                  placeholder="Enter your phone"
+                  type="phone"
+                  required
+                  name="phone"
+                  id="phone"
+                />
+              </div>
+              <div>
+                <label
+                  className="text-sm font-semibold text-gray-500/80"
                   htmlFor="password"
                 >
                   Password
