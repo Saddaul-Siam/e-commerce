@@ -1,10 +1,35 @@
+import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 import cartBasket from "../../images/banners/cartBasket.png";
 import logo from "../../images/logo/logo.svg";
 
-const create = () => {
+const Create = () => {
+  const { register, handleSubmit, reset } = useForm();
+  const [loginEmail, setLoginEmail] = useState();
+  const [loginPassword, setLoginPassword] = useState();
+
+  const handleLogin = () =>
+    console.log({ email: loginEmail, password: loginPassword });
+
+  const handleCreate = (data) => {
+    axios
+      .post("http://localhost:5000/api/v1/vendor", { data })
+      .then((response) => {
+        toast(response.data.message);
+      })
+      .catch((err) => {
+        if (err.response.data.error === "This email already exists") {
+          toast(err.response.data.error);
+        }
+        toast(err.response.data.error.split(":")[2]);
+        console.log(err.response.data);
+      });
+  };
+
   return (
     <div className="h-screen w-screen bg-red-500">
       <div className=" bg-white">
@@ -16,6 +41,7 @@ const create = () => {
             <div>
               <label htmlFor="">Email</label> <br />
               <input
+                onChange={(e) => setLoginEmail(e.target.value)}
                 type="email"
                 name="email"
                 id="email"
@@ -27,6 +53,7 @@ const create = () => {
               <label htmlFor="">Password</label>
               <br />
               <input
+                onChange={(e) => setLoginPassword(e.target.value)}
                 type="password"
                 name="password"
                 id="password"
@@ -34,7 +61,10 @@ const create = () => {
                 className="h-8 rounded border border-gray-600 px-2"
               />
             </div>
-            <button className="mt-4 rounded-md bg-red-500 py-2 px-8 text-white">
+            <button
+              onClick={handleLogin}
+              className="mt-4 rounded-md bg-red-500 py-2 px-8 text-white"
+            >
               Login
             </button>
           </div>
@@ -58,81 +88,84 @@ const create = () => {
               Welcome! Millions of Siam Store users are waiting to buy
               <br /> your product.
             </p>
-            <div className="space-y-3">
-              <div>
-                <label
-                  className="text-sm font-semibold text-gray-500/80"
-                  htmlFor="email"
-                >
-                  Email
-                </label>
-                <input
-                  className="h-10 w-full rounded border px-2 outline-1 focus:outline-red-500/90"
-                  placeholder="Enter your email"
-                  type="email"
-                  required
-                  name="email"
-                  id="email"
-                />
+            <form onSubmit={handleSubmit(handleCreate)}>
+              <div className="space-y-3">
+                <div>
+                  <label
+                    className="text-sm font-semibold text-gray-500/80"
+                    htmlFor="email"
+                  >
+                    Email
+                  </label>
+                  <input
+                    {...register("email", { required: true })}
+                    className="h-10 w-full rounded border px-2 outline-1 focus:outline-red-500/90"
+                    placeholder="Enter your email"
+                    type="email"
+                    required
+                    name="email"
+                    id="email"
+                  />
+                </div>
+                <div>
+                  <label
+                    className="text-sm font-semibold text-gray-500/80"
+                    htmlFor="contactNumber"
+                  >
+                    Phone Number
+                  </label>
+                  <input
+                    {...register("contactNumber", { required: true })}
+                    className="h-10 w-full rounded border px-2 outline-1 focus:outline-red-500/90"
+                    placeholder="Enter your phone"
+                    type="number"
+                    required
+                    name="contactNumber"
+                    id="contactNumber"
+                  />
+                </div>
+                <div>
+                  <label
+                    className="text-sm font-semibold text-gray-500/80"
+                    htmlFor="password"
+                  >
+                    Password
+                  </label>
+                  <input
+                    {...register("password", { required: true })}
+                    className="h-10 w-full rounded border px-2 outline-1 focus:outline-red-500/90"
+                    placeholder="Enter your password"
+                    type="password"
+                    required
+                    name="password"
+                    id="password"
+                  />
+                </div>
+                <div>
+                  <label
+                    className="text-sm font-semibold text-gray-500/80"
+                    htmlFor="confirmPassword"
+                  >
+                    Confirm Password
+                  </label>
+                  <input
+                    {...register("confirmPassword", { required: true })}
+                    className="h-10 w-full rounded border px-2 outline-1 focus:outline-red-500/90"
+                    placeholder="Enter your confirmPassword"
+                    type="confirmPassword"
+                    required
+                    name="confirmPassword"
+                    id="confirmPassword"
+                  />
+                </div>
               </div>
-              <div>
-                <label
-                  className="text-sm font-semibold text-gray-500/80"
-                  htmlFor="phone"
-                >
-                  Phone Number
-                </label>
-                <input
-                  className="h-10 w-full rounded border px-2 outline-1 focus:outline-red-500/90"
-                  placeholder="Enter your phone"
-                  type="phone"
-                  required
-                  name="phone"
-                  id="phone"
-                />
-              </div>
-              <div>
-                <label
-                  className="text-sm font-semibold text-gray-500/80"
-                  htmlFor="password"
-                >
-                  Password
-                </label>
-                <input
-                  className="h-10 w-full rounded border px-2 outline-1 focus:outline-red-500/90"
-                  placeholder="Enter your password"
-                  type="password"
-                  required
-                  name="password"
-                  id="password"
-                />
-              </div>
-              <div>
-                <label
-                  className="text-sm font-semibold text-gray-500/80"
-                  htmlFor="confirmPassword"
-                >
-                  Confirm Password
-                </label>
-                <input
-                  className="h-10 w-full rounded border px-2 outline-1 focus:outline-red-500/90"
-                  placeholder="Enter your confirmPassword"
-                  type="confirmPassword"
-                  required
-                  name="confirmPassword"
-                  id="confirmPassword"
-                />
-              </div>
-            </div>
-            <button className="btn mt-10 w-full border-0 bg-red-500 hover:bg-red-600">
-              Create Account
-            </button>
-            {/* <div className="divider text-xs">OR</div>
-            <Link href="/vendor/login">
-              <a>
-                <button className="w-full text-sm text-gray-600">Login</button>
-              </a>
-            </Link> */}
+              <button
+                // type="submit"
+                className="btn mt-10 w-full border-0 bg-red-500 hover:bg-red-600"
+              >
+                Create Account
+              </button>
+            </form>
           </div>
         </div>
       </div>
@@ -140,4 +173,4 @@ const create = () => {
   );
 };
 
-export default create;
+export default Create;
